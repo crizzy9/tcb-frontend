@@ -1,0 +1,10 @@
+<h1>Playground</h1>
+<h2>Foods</h2>
+<ul>
+  <li *ngFor="let food of foods">{{food.name}}</li>
+</ul>
+<form [formGroup]="newFoodForm" (ngSubmit)="postFood()">
+    <label class="active">Name</label>
+    <input id="name" type="text" formControlName="name">
+    <button id='food' type='submit'>Add New Food</button>
+</form>
