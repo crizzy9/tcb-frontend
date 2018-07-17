@@ -3,6 +3,8 @@ import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, Router, RouterModule, PreloadAllModules } from '@angular/router';
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CodebaseComponent, CodebaseRoutes, CodebaseModule } from './codebase/codebase.module';
 
 @Component({
@@ -26,6 +28,8 @@ const routes: Routes = [
         BrowserModule,
         FormsModule,
         HttpModule,
+        BrowserAnimationsModule,
+        ToastModule.forRoot(),
         RouterModule.forRoot(routes,
             { preloadingStrategy: PreloadAllModules }),
         CodebaseModule

@@ -35,7 +35,7 @@ export class PlaygroundComponent implements OnInit {
 
     postFood() {
         this._playgroundService.postFoods(this.newFoodForm.value.name).subscribe(
-            data => {console.log('this is data ' + data); },
+            data => {console.log(data); },
             err => console.log(err),
             () => console.log('new food added')
         );
