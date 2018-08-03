@@ -124,11 +124,11 @@
     "defaultProject": "tcb-frontend",
     "schematics": {
       "@schematics/angular:component": {
-        "prefix": "pt",
+        "prefix": "tcb",
         "styleext": "scss"
       },
       "@schematics/angular:directive": {
-        "prefix": "pt"
+        "prefix": "tcb"
       }
     }
   }

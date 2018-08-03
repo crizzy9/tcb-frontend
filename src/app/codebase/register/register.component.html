@@ -1,0 +1,13 @@
+<h2>New User Registeration</h2>
+
+<form [formGroup]="newRegisterForm" (ngSubmit)="postRegister()">
+    <label class="active">Name</label>
+    <input id="name" type="text" formControlName="name">
+    <br/>
+    <label class="active">Email</label>
+    <input id="email" type="text" formControlName="email">
+    <br/>
+    <label class="active">Password</label>
+    <input id="password" type="password" formControlName="password">
+    <button id='register' type='submit'>Register</button>
+</form>

@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PlaygroundComponent } from './playground/playground.component';
 import { PlaygroundService } from './playground.service';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AuthenticationService } from './authenticationn.service';
 
 
 @Component({
@@ -29,7 +32,8 @@ export class CodebaseComponent implements OnInit {
 export const CodebaseRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'about', component: AboutComponent},
-    { path: 'playground', component: PlaygroundComponent}
+    { path: 'playground', component: PlaygroundComponent},
+    { path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({
@@ -44,10 +48,13 @@ export const CodebaseRoutes: Routes = [
         CodebaseComponent,
         HomeComponent,
         AboutComponent,
-        PlaygroundComponent
+        PlaygroundComponent,
+        LoginComponent,
+        RegisterComponent
     ],
     providers: [
-        PlaygroundService
+        PlaygroundService,
+        AuthenticationService,
     ]
 })
 export class CodebaseModule { }
