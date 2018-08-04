@@ -6,6 +6,8 @@ import { Routes, Router, RouterModule, PreloadAllModules } from '@angular/router
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CodebaseComponent, CodebaseRoutes, CodebaseModule } from './codebase/codebase.module';
+import { ProfileComponent, ProfileRoutes, ProfileModule } from './profile/profile.module';
+import { SharedModule } from './shared/shared.module';
 
 @Component({
     selector: 'app-root',
@@ -17,7 +19,8 @@ export class AppComponent {
 }
 
 const routes: Routes = [
-    { path: '', component: CodebaseComponent, children: CodebaseRoutes }
+    { path: '', component: CodebaseComponent, children: CodebaseRoutes },
+    { path: 'profile', component: ProfileComponent, children: ProfileRoutes },
 ];
 
 @NgModule({
@@ -32,7 +35,9 @@ const routes: Routes = [
         ToastModule.forRoot(),
         RouterModule.forRoot(routes,
             { preloadingStrategy: PreloadAllModules }),
-        CodebaseModule
+        CodebaseModule,
+        ProfileModule,
+        SharedModule
     ],
   providers: [],
   bootstrap: [AppComponent],
