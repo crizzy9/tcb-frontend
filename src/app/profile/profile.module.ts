@@ -11,7 +11,10 @@ import { BlogComponent } from './blog/blog.component';
 
 @Component({
   selector: 'tcb-profile',
-  template: '<router-outlet></router-outlet>'
+  template: `
+    <tcb-header></tcb-header>
+    <router-outlet></router-outlet>
+  `
 })
 export class ProfileComponent implements OnInit {
   constructor() {}

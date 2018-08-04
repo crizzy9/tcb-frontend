@@ -1,24 +1,15 @@
-<mat-menu #appMenu="matMenu">
-  <button mat-menu-item>Settings</button>
-  <button mat-menu-item>Help</button>
-</mat-menu>
-
-<button mat-icon-button [matMenuTriggerFor]="appMenu">
-  <mat-icon>more_vert</mat-icon>
-</button>
-
-<mat-toolbar color="primary">
+<mat-toolbar class="navbar" color="primary">
   <mat-toolbar-row>
     <div class="navbar-header">
       <img class='website-logo' src='assets/images/logo.png' />
     </div>
-    <span>MyMaterial</span>
 
     <span class="example-spacer"></span>
     
-    <button mat-button>About</button>
-    <button mat-button>Services</button>
-    <button mat-button>Contact</button>
+    <button mat-button><span>Home</span></button>
+    <button mat-button><span>Blog</span></button>
+    <button mat-button><span>About</span></button>
+    <button mat-button><span>Login</span></button>
   </mat-toolbar-row>
 </mat-toolbar>
 
