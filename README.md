@@ -1,15 +1,20 @@
 # TcbFrontend
 
-### Run this to start the project
-Prod Run (Use only this for now)
+## Install Dependancies
 ```
 npm install
-npm run build (ng build --aot --prod)
-npm start
 ```
-Go to `localhost:8080`
+ignore the `fsevents` error
 
-Dev Run
+## Dev run
 ```
 ng serve
+localhost:4200
+```
+
+## Prod run
+```
+npm run build (ng build --aot --prod)
+npm start (starts express server that hosts the /dist folder)
+localhost:8080
 ```

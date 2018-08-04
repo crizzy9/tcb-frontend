@@ -14,8 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { AuthenticationService } from './authenticationn.service';
 import { HeaderComponent } from './header/header.component';
 
-// import {MatMenuModule} from '@angular/material/menu';
-// import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule, MatIconModule, MatToolbarModule, MatButtonModule} from '@angular/material';
 
 @Component({
     selector: 'tcb-codebase',
@@ -47,8 +46,9 @@ export const CodebaseRoutes: Routes = [
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        // MatMenuModule,
-        // MatIconModule
+        MatMenuModule,
+        MatIconModule,
+        MatToolbarModule
     ],
     declarations: [
         CodebaseComponent,
