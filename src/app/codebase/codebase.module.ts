@@ -12,7 +12,10 @@ import { PlaygroundService } from './playground.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthenticationService } from './authenticationn.service';
+import { HeaderComponent } from './header/header.component';
 
+// import {MatMenuModule} from '@angular/material/menu';
+// import {MatIconModule} from '@angular/material/icon';
 
 @Component({
     selector: 'tcb-codebase',
@@ -33,7 +36,8 @@ export const CodebaseRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'about', component: AboutComponent},
     { path: 'playground', component: PlaygroundComponent},
-    { path: 'register', component: RegisterComponent}
+    { path: 'register', component: RegisterComponent},
+    { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
@@ -42,7 +46,9 @@ export const CodebaseRoutes: Routes = [
         RouterModule,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        // MatMenuModule,
+        // MatIconModule
     ],
     declarations: [
         CodebaseComponent,
@@ -50,7 +56,8 @@ export const CodebaseRoutes: Routes = [
         AboutComponent,
         PlaygroundComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        HeaderComponent
     ],
     providers: [
         PlaygroundService,

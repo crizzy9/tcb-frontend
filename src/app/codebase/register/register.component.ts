@@ -10,9 +10,8 @@ import { AuthenticationService } from '../authenticationn.service';
 })
 export class RegisterComponent implements OnInit {
 
-    public foods;
     formControls: { [key: string]: FormControl } = {};
-    newRegisterForm: FormGroup;
+    registrationForm: FormGroup;
 
     constructor(private _authService: AuthenticationService, private zone: NgZone) {
         this.formControls = {
@@ -20,14 +19,14 @@ export class RegisterComponent implements OnInit {
             'email': new FormControl('', Validators.compose([Validators.required])),
             'password': new FormControl('', Validators.compose([Validators.required]))
         };
-        this.newRegisterForm = new FormGroup(this.formControls);
+        this.registrationForm = new FormGroup(this.formControls);
     }
 
     ngOnInit() {
     }
 
     postRegister() {
-        const formValue = this.newRegisterForm.value;
+        const formValue = this.registrationForm.value;
         this._authService.postRegister(formValue.name, formValue.email, formValue.password).subscribe(
             data => console.log(data),
             err => console.log(err),

@@ -21,5 +21,6 @@
     "tabSize": 4,
     "newLineCharacter": "\r\n",
     "convertTabsToSpaces": true
-}
+  },
+  "include": ["src/**/*.ts"]
 }
