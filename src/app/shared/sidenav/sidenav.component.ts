@@ -11,12 +11,12 @@ export class SidenavComponent implements OnInit {
   image: boolean = true;
   user: boolean = false;
   title: string = "Shyam Padia";
-  description: string = "simple engineer with a guitar";
+  description: string = "Data Scientist, Software Engineer";
 
   constructor() { }
 
   ngOnInit() {
-    this.topics = ["Main 1", "Main 2", "Main 3"];
+    this.topics = ["Main 1", "Main 2", "Main 3", "Main 4"];
   }
 
 }
