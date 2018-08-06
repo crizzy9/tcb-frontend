@@ -1,0 +1,28 @@
+<div class="image-container">
+  <mat-card class="image-card">
+      <img mat-card-image src="assets/images/dp.jpg" alt="Profile Photo" />
+      <mat-card-title>{{title}}</mat-card-title>
+      <mat-card-content>
+        <p>{{description}}</p>
+      </mat-card-content>
+      <mat-card-actions *ngIf="user">
+          <button mat-button>CHANGE PHOTO</button>
+      </mat-card-actions>
+  </mat-card>
+</div>
+<mat-divider [inset]="true"></mat-divider>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav>Start</mat-sidenav>
+  <!-- <mat-sidenav-content class="image-container" *ngIf="image">
+    <img src="assets/images/dp.jpg" />
+    <div class="image-desc column">
+      <div class="title row">
+        <span>{{title}}</span>
+      </div>
+      <div class="description row">
+        <span>{{description}}</span>
+      </div>
+    </div>
+  </mat-sidenav-content> -->
+  <mat-sidenav-content class="sidenav-content" *ngFor="let topic of topics">{{topic}}</mat-sidenav-content>
+</mat-sidenav-container>

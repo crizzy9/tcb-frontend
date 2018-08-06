@@ -1,9 +1,19 @@
 import { NgModule, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {MatMenuModule, MatIconModule, MatToolbarModule, MatButtonModule} from '@angular/material';
+import {
+  MatMenuModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatListModule,
+  MatCardModule,
+  MatDividerModule
+} from '@angular/material';
 
 import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 // @Component({
 //   selector: 'tcb-shared',
@@ -20,14 +30,20 @@ import { HeaderComponent } from './header/header.component';
     MatMenuModule,
     MatIconModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    MatDividerModule
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SidenavComponent
   ],
   exports: [
     // allows to use tcb-header in profile module
-    HeaderComponent
+    HeaderComponent,
+    SidenavComponent
   ]
 })
 export class SharedModule { }

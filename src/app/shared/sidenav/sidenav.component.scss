@@ -1,0 +1,31 @@
+.image-container img{
+    display: block;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.image-container .title {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Helvetica;
+    text-align: center;
+}
+.image-container .desc {
+    font-size: 12px;
+    text-align: center;
+    font-family: Helvetica;
+}
+.sidenav-container {
+    margin-left: 20px;
+    padding-right: 10px;
+    border-right: 3px solid gray;
+}
+.sidenav-content {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding: 10px;
+}
