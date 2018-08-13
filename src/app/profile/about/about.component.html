@@ -1,10 +1,51 @@
 <div class="column" id="sidebar">
-    <tcb-sidenav></tcb-sidenav>
+    <div class="sidenav">
+        <tcb-sidenav></tcb-sidenav>
+    </div>
 </div>
 <div class="column" id="maincontent">
-    <p>
-        about works!
-    </p>  
+    <div class="main-container">
+        <mat-card class="intro-card">
+            <!--Basic Introduction-->
+            <mat-card-title class="title">Hello</mat-card-title>
+            <mat-card-content class="derscription">
+                <p>
+                    I am an experienced Software Engineer and Researcher with immense passion about Computer Science.
+                    I specialize in Artificial Intelligence, more specifically Natural Language Processig and Reinforcement Learning.
+                </p>
+            </mat-card-content>
+            <!--List of social media to follow including email in icon form-->
+            <ul>
+                <li *ngFor="let icon of icons">
+                    <a class="social-icons" href="{{socialIcons[icon].url}}">
+                        <img src="{{socialIcons[icon].icon}}" />
+                    </a>
+                </li>
+            </ul>
+
+        </mat-card>
+        <!-- <mat-card class="education-card"> -->
+            <!--Education and Highlights-->
+        <!-- </mat-card>
+        <mat-card class="experience-card"> -->
+            <!--Experiennce-->
+        <!-- </mat-card>
+        <mat-card class="skills-card">
+
+        </mat-card>
+        <mat-card class="projects-card">
+
+        </mat-card>
+        <mat-card class="achievemt-card">
+
+        </mat-card>
+        <mat-card class="leadership-card">
+
+        </mat-card>
+        <mat-card class="education-card">
+
+        </mat-card> -->
+    </div>
 </div>
 
 <!-- Other side bar for about -->

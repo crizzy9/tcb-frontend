@@ -8,6 +8,16 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 
+import {
+    MatMenuModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    MatDividerModule
+  } from '@angular/material';
 
 @Component({
   selector: 'tcb-profile',
@@ -31,6 +41,14 @@ export const ProfileRoutes: Routes = [
     CommonModule,
     SharedModule,
     RouterModule,
+    MatMenuModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    MatDividerModule
   ],
   declarations: [ProfileComponent, HomeComponent, AboutComponent, BlogComponent]
 })

@@ -1,11 +1,40 @@
-.column {
+#sidebar.column {
+    width: 20%;
     float: left;
+}
+
+.column .sidenav {
     padding: 10px;
     height: 300px;
-    #sidebar {
-        width: 20%;
-    }
-    #maincontent {
-        width: 70%;
+}
+
+#maincontent.column {
+    width: 80%;
+    float: right;
+}
+
+.column .main-container {
+    padding: 10px;
+    height: auto;
+}
+
+.main-container .intro-card ul {
+    list-style: none;
+    padding-top: 10px;
+    li {
+        display: inline;
+        margin-left: 5px;
+        a {
+            text-decoration: none;
+        }
+        img {
+            height: 30px;
+            filter: grayscale(0%);
+            -webkit-filter: grayscale(0%);
+        }
+        img:hover {
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+        }
     }
 }
