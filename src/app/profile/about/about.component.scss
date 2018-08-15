@@ -38,3 +38,26 @@
         }
     }
 }
+
+ mat-card {
+    margin-bottom: 10px;
+ }
+
+
+.edu-highlight .column {
+    width: 50%;
+}
+
+.education {
+    float: left;
+}
+.highlights {
+    float: right;
+    padding-left: 10px;
+}
+
+ .row {
+    display: flex;
+    // display: inline-flex;
+    clear: both;
+ }
