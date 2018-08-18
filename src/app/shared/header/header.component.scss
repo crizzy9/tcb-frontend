@@ -3,8 +3,12 @@
 }
 
 .navbar {
-  margin-top: 20px;
   background: gray;
+  position: fixed;
+  z-index: 999;
+  margin-top: -8px;
+  margin-left: -8px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .navbar-header img {
@@ -26,9 +30,8 @@
     text-decoration: none;
 }
 
-
 // /*---------------------------------------
-//     Main Navigation             
+//     Main Navigation
 // -----------------------------------------*/
 
 //   .navbar-default {
@@ -37,7 +40,7 @@
 //     border: none;
 //     margin-bottom: 0px !important;
 //   }
-  
+
 //   .navbar-default .navbar-brand {
 //     color: #304352;
 //     font-size: 28px;
@@ -53,7 +56,7 @@
 //   .navbar-pane {
 //     float: right;
 //   }
-  
+
 //   .navbar-default img {
 //     height: 60px;
 //   }
@@ -83,13 +86,13 @@
 //     text-align: center;
 //     text-decoration: none;
 //   }
-  
+
 //   .navbar-default .navbar-nav li a span {
 //     position: relative;
 //     display: block;
 //     padding-bottom: 2px;
 //   }
-  
+
 //   .navbar-default .navbar-nav li a span:before {
 //     content: "";
 //     position: absolute;
@@ -110,7 +113,7 @@
 //     -o-transition: all 0.3s ease-in-out 0s;
 //     transition: all 0.3s ease-in-out 0s;
 //   }
-  
+
 //   .navbar-default .navbar-nav li a:hover span:before {
 //     visibility: visible;
 //     -webkit-transform: scaleX(1);
@@ -119,47 +122,47 @@
 //     -o-transform: scaleX(1);
 //     transform: scaleX(1);
 //   }
-  
+
 //   .navbar-default .navbar-nav li.active a span:before {
 //     visibility: visible;
 //     -webkit-transform: scaleX(1);
 //     transform: scaleX(1);
 //     background-color: #304352;
 //   }
-  
+
 //   .navbar-default .navbar-nav > li a:hover {
 //       color: #304352 !important;
 //   }
-  
+
 //   .navbar-default .navbar-nav > li > a:hover,
 //   .navbar-default .navbar-nav > li > a:focus {
 //       color: #777;
 //       background-color: transparent;
 //   }
-  
+
 //   .navbar-default .navbar-nav > .active > a,
 //   .navbar-default .navbar-nav > .active > a:hover,
 //   .navbar-default .navbar-nav > .active > a:focus {
 //       color: #304352;
 //       background-color: transparent;
 //   }
-  
+
 //   .navbar-default .navbar-toggle {
 //        border: none;
 //        padding-top: 10px;
 //     }
-  
+
 //   .navbar-default .navbar-toggle .icon-bar {
 //       border-color: transparent;
 //     }
-  
+
 //   .navbar-default .navbar-toggle:hover,
-//   .navbar-default .navbar-toggle:focus { 
+//   .navbar-default .navbar-toggle:focus {
 //     background-color: transparent;
 //   }
-  
+
 //   @media screen and (max-width: 768px) {
-    
+
 //     .navbar-default .navbar-nav li a span:before {
 //       background: transparent !important;
 //     }
@@ -174,4 +177,3 @@
 //       transform: scaleX(1);
 //     }
 //   }
-  

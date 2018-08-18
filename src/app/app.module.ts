@@ -8,7 +8,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CodebaseComponent, CodebaseRoutes, CodebaseModule } from './codebase/codebase.module';
 import { ProfileComponent, ProfileRoutes, ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
-
 @Component({
     selector: 'app-root',
     template: '<router-outlet></router-outlet>'

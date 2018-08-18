@@ -1,13 +1,13 @@
 <div class="column" id="sidebar">
     <div class="sidenav">
-        <tcb-sidenav></tcb-sidenav>
+        <tcb-sidenav [topics]="sections"></tcb-sidenav>
     </div>
 </div>
 <div class="column" id="maincontent">
     <div class="main-container">
 
         <!--Basic Introduction-->
-        <mat-card class="intro-card">
+        <mat-card class="intro-card section" id="sections[0].id">
             <mat-card-title class="title">Hello</mat-card-title>
             <mat-card-content class="derscription">
                 <p>
@@ -27,16 +27,16 @@
         </mat-card>
 
         <!--Education and Highlights-->
-        <div class="row edu-highlight">
+        <div class="row edu-highlight section" id="sections[0].id">
             <div class="column education">
-                <mat-card class="education-card">
+                <mat-card class="education-card" id="sections[1].id">
                     <mat-card-title>Education</mat-card-title>
                     <mat-list>
-                            <h3>Northeastern University</h3>
-                            <mat-list-item>Studied Computer Science </mat-list-item>
-                            <h3>University of Mumbai</h3>
-                            <mat-list-item>Studied Computer Engineering</mat-list-item>
-                        </mat-list>
+                        <h3>Northeastern University</h3>
+                        <mat-list-item>Master of Science in Computer Science </mat-list-item>
+                        <h3>University of Mumbai</h3>
+                        <mat-list-item>Bachelor of Engineering in Computer Engineering</mat-list-item>
+                    </mat-list>
                 </mat-card>
             </div>
             <div class="column highlights">
@@ -52,24 +52,43 @@
         </div>
 
         <!--Experiennce-->
-        <mat-card class="experience-card">
+        <mat-card class="experience-card section" id="sections[2].id">
             <mat-card-title>Experience</mat-card-title>
+            <mat-list>
+                <h3>Intuit</h3>
+                <h4>Software Engineering Coop</h4>
+                <h5>San Diego, California</h5>
+                <mat-list-item>Worked in the CG Department of TurboTax in the Self Service Team. Worked with python lambdas and spring boot. Saved close to 2 million $. Won the First Ever Innovator Award at the Codechella event</mat-list-item>
+                <h3>Votercircle</h3>
+                <h4>Software Developer</h4>
+                <h5>Bangalore, India</h5>
+                <mat-list-item>Built the Organizer functionality from the ground up, Integrated NationBuilder, Elastic Search</mat-list-item>
+                <h3>IIT Bombay</h3>
+                <h4>Research Intern</h4>
+                <h5>Mumbai, India</h5>
+                <mat-list-item>Created micro-services for automated notifications and invoice generation.</mat-list-item>
+            </mat-list>
         </mat-card>
-        <mat-card class="skills-card">
+        <mat-card class="skills-card section" id="sections[3].id">
             <mat-card-title>Skills</mat-card-title>
+            <mat-list>
+                <mat-list-item>
+                        <span class="skill">Python</span>
+                        <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                </mat-list-item>
+                <mat-list-item>
+                        <span class="skill">Java</span>
+                        <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+                </mat-list-item>
+            </mat-list>
         </mat-card>
-        <mat-card class="projects-card">
+        <mat-card class="projects-card section" id="sections[4].id">
             <mat-card-title>Projects</mat-card-title>
         </mat-card>
-        <mat-card class="achievemts-card">
+        <mat-card class="achievemts-card section" id="sections[5].id">
             <mat-card-title>Achievements</mat-card-title>
         </mat-card>
-        <mat-card class="leadership-card">
-            <mat-card-title>Leadership</mat-card-title>
-        </mat-card>
-        <!-- <mat-card class="education-card">
-
-        </mat-card> -->
+        <!-- Other stuff like leadership(find a better name): ieee, networking internship and stuff, Publications, Interests, Hobbies-->
     </div>
 </div>
 

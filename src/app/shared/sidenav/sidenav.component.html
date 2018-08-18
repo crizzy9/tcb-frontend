@@ -12,7 +12,7 @@
       <mat-sidenav-container class="sidenav-container">
         <mat-sidenav>Start</mat-sidenav>
         <mat-sidenav-content class="sidenav-content" *ngFor="let topic of topics">
-          <div class="text-wrapper">{{topic}}</div>
+          <div class="text-wrapper"><a class="nav-link" [routerLink]="['.']" [fragment]="topic.id">{{topic.name}}</a></div>
         </mat-sidenav-content>
       </mat-sidenav-container>
   </mat-card>

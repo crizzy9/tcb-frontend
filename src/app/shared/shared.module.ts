@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -34,7 +35,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    RouterModule
   ],
   declarations: [
     HeaderComponent,

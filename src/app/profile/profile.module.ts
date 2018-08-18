@@ -16,7 +16,9 @@ import {
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatProgressBarModule,
+    MatTooltipModule
   } from '@angular/material';
 
 @Component({
@@ -48,7 +50,8 @@ export const ProfileRoutes: Routes = [
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatProgressBarModule
   ],
   declarations: [ProfileComponent, HomeComponent, AboutComponent, BlogComponent]
 })

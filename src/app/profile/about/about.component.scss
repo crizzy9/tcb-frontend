@@ -43,7 +43,6 @@
     margin-bottom: 10px;
  }
 
-
 .edu-highlight .column {
     width: 50%;
 }
@@ -56,8 +55,11 @@
     padding-left: 10px;
 }
 
- .row {
+.row {
     display: flex;
-    // display: inline-flex;
     clear: both;
- }
+}
+
+span.skill {
+    width: 100px;
+}

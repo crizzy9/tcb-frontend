@@ -58,6 +58,33 @@ export class AboutComponent implements OnInit {
         }
     };
 
+    sections: Object[] = [
+        {
+            id: 'intro',
+            name: 'Init()'
+        },
+        {
+            id: 'education',
+            name: 'Education && Highlights'
+        },
+        {
+            id: 'experience',
+            name: 'Experience'
+        },
+        {
+            id: 'skills',
+            name: 'Skills'
+        },
+        {
+            id: 'projects',
+            name: 'Projects'
+        },
+        {
+            id: 'achievements',
+            name: 'Achievements'
+        },
+    ];
+
     constructor() {
         this.icons = Object.keys(this.socialIcons);
     }
