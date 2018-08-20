@@ -12,24 +12,8 @@
       <mat-sidenav-container class="sidenav-container">
         <mat-sidenav>Start</mat-sidenav>
         <mat-sidenav-content class="sidenav-content" *ngFor="let topic of topics">
-          <div class="text-wrapper"><a class="nav-link" [routerLink]="['.']" [fragment]="topic.id">{{topic.name}}</a></div>
+          <div class="text-wrapper"><a class="nav-link" [ngClass]="{'active': topic.id === currentFragment}" [routerLink]="['.']" [fragment]="topic.id">{{topic.name}}</a></div>
         </mat-sidenav-content>
       </mat-sidenav-container>
   </mat-card>
 </div>
-<!-- <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav>Start</mat-sidenav>
-  <mat-sidenav-content class="sidenav-content" *ngFor="let topic of topics">{{topic}}</mat-sidenav-content>
-</mat-sidenav-container> -->
-
-  <!-- <mat-sidenav-content class="image-container" *ngIf="image">
-    <img src="assets/images/dp.jpg" />
-    <div class="image-desc column">
-      <div class="title row">
-        <span>{{title}}</span>
-      </div>
-      <div class="description row">
-        <span>{{description}}</span>
-      </div>
-    </div>
-  </mat-sidenav-content> -->

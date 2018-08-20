@@ -58,7 +58,7 @@ export class AboutComponent implements OnInit {
         }
     };
 
-    sections: Object[] = [
+    sections: Array<any> = [
         {
             id: 'intro',
             name: 'Init()'
