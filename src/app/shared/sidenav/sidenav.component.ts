@@ -27,6 +27,7 @@ export class SidenavComponent implements OnInit {
                     console.log(element);
                     if (element) {
                         element.scrollIntoView(true);
+                        window.scrollBy(0, -64);
                         this.currentFragment = tree.fragment;
                     }
                 }
