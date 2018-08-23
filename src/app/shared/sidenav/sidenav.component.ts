@@ -22,9 +22,9 @@ export class SidenavComponent implements OnInit {
             if (s instanceof NavigationEnd) {
                 const tree = this.router.parseUrl(this.router.url);
                 if (tree.fragment) {
-                    console.log(tree.fragment);
+                    // console.log(tree.fragment);
                     const element = document.querySelector('#' + tree.fragment);
-                    console.log(element);
+                    // console.log(element);
                     if (element) {
                         element.scrollIntoView(true);
                         window.scrollBy(0, -64);
@@ -49,9 +49,9 @@ export class SidenavComponent implements OnInit {
                 // Assign active class to nav links while scolling
                 $('.section').each(function (i) {
                     if ($(this).position().top <= scrollDistance) {
-                        console.log(i);
-                        console.log(scrollDistance);
-                        console.log($(this).position().top);
+                        // console.log(i);
+                        // console.log(scrollDistance);
+                        // console.log($(this).position().top);
                         $('mat-sidenav-container a.active').removeClass('active');
                         $('mat-sidenav-container a').eq(i).addClass('active');
                     }
