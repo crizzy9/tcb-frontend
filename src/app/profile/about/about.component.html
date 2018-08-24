@@ -103,13 +103,14 @@
         </mat-card>
         <mat-card class="projects-card section" id="{{sections[4].id}}">
             <mat-card-title>Projects</mat-card-title>
-            <mat-grid-list cols="3" rowHeight="200px">
-                <mat-grid-tile
-                    *ngFor="let tile of tiles"
-                    [colspan]="tile.cols"
-                    [rowspan]="tile.rows"
-                    [style.background]="tile.color">
-                  {{tile.text}}
+            <mat-grid-list class="projects-grid" cols="3" rowHeight="200px">
+                <mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+                        <div  class="project-tile-body">
+                            {{tile.text}}
+                        </div>
+                        <div class="project-tile-layer">
+                            <div class="project-layer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+                        </div>
                 </mat-grid-tile>
             </mat-grid-list>
         </mat-card>
