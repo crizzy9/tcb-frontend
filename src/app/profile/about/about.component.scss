@@ -41,8 +41,22 @@ mat-card {
     margin-bottom: 10px;
 }
 
-.edu-highlight .column {
-    width: 50%;
+.education-card {
+    mat-list {
+        margin-left: -20px;
+        padding-top: 25px;
+    }
+    mat-list-item:last-of-type {
+        padding-top: 100px;
+    }
+}
+
+.edu-highlight {
+    display: flex;
+    clear: both;
+    .column.education {
+        width: 50%;
+    }
 }
 
 .education {
@@ -53,9 +67,28 @@ mat-card {
     padding-left: 10px;
 }
 
-.row {
-    display: flex;
-    clear: both;
+.row.univ-title-container {
+    display: inline-block;
+
+    .univ-logo {
+        float: left;
+        width: 25%;
+    }
+    .univ-title {
+        font-size: 20px;
+        font-weight: 500;
+        // display: block;
+    }
+    .college {
+        white-space: nowrap
+    }
+    .major {
+        display: inline-block;
+        width: 70%;
+    }
+    .graduation {
+        display: inline-block;
+    }
 }
 
 span.skill {
@@ -117,12 +150,16 @@ span.skill {
 
 .intro-card.terminal_window {
     padding: 0px;
-    .title {
+    .topbar {
         margin-bottom: 0px;
     }
     .description p {
         padding-left: 10px;
     }
+}
+
+mat-card-title.card-title span {
+    border-bottom: rgb(250, 221, 75) solid 2px;
 }
 
 .project-tile {

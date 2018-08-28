@@ -9,7 +9,7 @@
         <!--Basic Introduction-->
         <mat-card class="intro-card section terminal_window" id="{{sections[0].id}}">
             <!--Section should be called my SOURCE CODE!!!-->
-            <mat-card-title class="title">
+            <mat-card-title class="topbar">
                 <div class="red_btn button"></div>
                 <div class="green_btn button"></div>
                 <div class="yellow_btn button"></div>
@@ -46,25 +46,49 @@
         <div class="row edu-highlight section" id="{{sections[1].id}}">
             <div class="column education">
                 <mat-card class="education-card">
-                    <mat-card-title>Education</mat-card-title>
+                    <mat-card-title class="card-title"><span>Education</span></mat-card-title>
                     <mat-list>
-                        <h3>Northeastern University</h3>
-                        <mat-list-item>Master of Science in Computer Science </mat-list-item>
-                        <h3>University of Mumbai</h3>
-                        <mat-list-item>Bachelor of Engineering in Computer Engineering</mat-list-item>
+
+                        <mat-list-item>
+                            <div class="row univ-title-container">
+                                <div class="column logo">
+                                    <img class="univ-logo" src="assets/images/northeasternlogo.png">
+                                </div>
+                                <div class="column content">
+                                    <span class="univ-title">Northeastern University</span>
+                                    <span class="college">College of Computer and Information Science</span>
+                                    <span class="major">Master of Science in Computer Science</span>
+                                    <span class="graduation">December 2019</span>
+                                    <!--Courses-->
+                                    <!--Achievements-->
+                                </div>
+                            </div>
+                        </mat-list-item>
+
+                        <mat-list-item>
+                            <div class="row univ-title-container">
+                                <div class="column">
+                                    <img class="univ-logo" src="assets/images/mumbaiuniversitylogo.png">
+                                </div>
+                                <div class="column">
+                                    <span class="univ-title">University of Mumbai</span>
+                                    <span class="college">Fr. Conceicao Rodrigues College of Engineering</span>
+                                    <span class="major">Bachelor of Engineering in Computer Engineering</span>
+                                    <span class="graduation">May 2016</span>
+                                </div>
+                            </div>
+                        </mat-list-item>
                     </mat-list>
                 </mat-card>
             </div>
             <div class="column highlights">
                 <mat-card class="highlights-card" id="highlights-card">
-                    <div class="highlights-cloud" id="highlights-cloud"></div>
-                    <!-- <mat-card-title>Highlights</mat-card-title>
+                    <!-- <div class="highlights-cloud" id="highlights-cloud"></div> -->
+                    <mat-card-title class="card-title"><span>Highlights</span></mat-card-title>
                     <mat-list>
                             <mat-list-item>Data Scientist, Software Architect</mat-list-item>
                             <mat-list-item>Problem Solver, Design Thinker</mat-list-item>
-                    </mat-list> -->
-                    <!-- <word-cloud [wordData]="inputData"></word-cloud> -->
-
+                    </mat-list>
                 </mat-card>
             </div>
             <br style="clear:both;"/>
@@ -72,7 +96,7 @@
 
         <!--Experiennce-->
         <mat-card class="experience-card section" id="{{sections[2].id}}">
-            <mat-card-title>Experience</mat-card-title>
+            <mat-card-title class="card-title"><span>Experience</span></mat-card-title>
             <mat-list>
                 <h3>Intuit</h3>
                 <h4>Software Engineering Coop</h4>
@@ -89,7 +113,7 @@
             </mat-list>
         </mat-card>
         <mat-card class="skills-card section" id="{{sections[3].id}}">
-            <mat-card-title>Skills</mat-card-title>
+            <mat-card-title class="card-title"><span>Skills</span></mat-card-title>
             <mat-list>
                 <mat-list-item>
                         <span class="skill">Python</span>
@@ -102,7 +126,7 @@
             </mat-list>
         </mat-card>
         <mat-card class="projects-card section" id="{{sections[4].id}}">
-            <mat-card-title>Projects</mat-card-title>
+            <mat-card-title class="card-title"><span>Projects</span></mat-card-title>
             <mat-grid-list class="projects-grid" cols="3" rowHeight="200px">
                 <mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
                         <div  class="project-tile-body">
@@ -115,7 +139,7 @@
             </mat-grid-list>
         </mat-card>
         <mat-card class="achievements-card section" id="{{sections[5].id}}">
-            <mat-card-title>Achievements</mat-card-title>
+            <mat-card-title class="card-title"><span>Achievements</span></mat-card-title>
             <mat-list>
                 <mat-list-item>Innovator Award - Codechella 2018</mat-list-item>
                 <mat-list-item>Runner Up, Paper Presentation, Technomania 2016</mat-list-item>
