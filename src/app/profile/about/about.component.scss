@@ -51,21 +51,21 @@ mat-card {
     }
 }
 
-.edu-highlight {
-    display: flex;
-    clear: both;
-    .column.education {
-        width: 50%;
-    }
-}
+// .edu-highlight {
+//     display: flex;
+//     clear: both;
+//     .column.education {
+//         width: 50%;
+//     }
+// }
 
-.education {
-    float: left;
-}
-.highlights {
-    float: right;
-    padding-left: 10px;
-}
+// .education {
+//     float: left;
+// }
+// .highlights {
+//     float: right;
+//     padding-left: 10px;
+// }
 
 .row.univ-title-container {
     display: inline-block;
@@ -74,20 +74,22 @@ mat-card {
         float: left;
         width: 25%;
     }
+    .info-list {
+        list-style: none;
+    }
     .univ-title {
         font-size: 20px;
         font-weight: 500;
-        // display: block;
     }
     .college {
-        white-space: nowrap
+        white-space: nowrap;
     }
     .major {
-        display: inline-block;
+        // display: inline-block;
         width: 70%;
     }
     .graduation {
-        display: inline-block;
+        // display: inline-block;
     }
 }
 

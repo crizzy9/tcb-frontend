@@ -26,6 +26,7 @@
                         I am an experienced Software Engineer and Researcher with immense passion about Computer Science.
                         I specialize in Artificial Intelligence, more specifically Natural Language Processig and Reinforcement Learning.
                     </p> -->
+                    <!--List of social media to follow including email in icon form-->
                     <ul>
                         <li *ngFor="let icon of icons">
                             <a class="social-icons" href="{{socialIcons[icon].url}}">
@@ -37,62 +38,48 @@
                 </div>
 
             </mat-card-content>
-            <!--List of social media to follow including email in icon form-->
-
-
         </mat-card>
 
-        <!--Education and Highlights-->
-        <div class="row edu-highlight section" id="{{sections[1].id}}">
-            <div class="column education">
-                <mat-card class="education-card">
-                    <mat-card-title class="card-title"><span>Education</span></mat-card-title>
-                    <mat-list>
+        <!--Education-->
+        <mat-card class="education-card" id="{{sections[1].id}}">
+            <mat-card-title class="card-title"><span>Education</span></mat-card-title>
+            <mat-list>
 
-                        <mat-list-item>
-                            <div class="row univ-title-container">
-                                <div class="column logo">
-                                    <img class="univ-logo" src="assets/images/northeasternlogo.png">
-                                </div>
-                                <div class="column content">
-                                    <span class="univ-title">Northeastern University</span>
-                                    <span class="college">College of Computer and Information Science</span>
-                                    <span class="major">Master of Science in Computer Science</span>
-                                    <span class="graduation">December 2019</span>
-                                    <!--Courses-->
-                                    <!--Achievements-->
-                                </div>
-                            </div>
-                        </mat-list-item>
+                <mat-list-item>
+                    <div class="row univ-title-container">
+                        <div class="column logo">
+                            <img class="univ-logo" src="assets/images/northeasternlogo.png">
+                        </div>
+                        <div class="column content">
+                            <ul class="info-list">
+                                <li><span class="univ-title">Northeastern University</span></li>
+                                <li><span class="college">College of Computer and Information Science</span></li>
+                                <li><span class="major">Master of Science in Computer Science</span></li>
+                                <li><span class="graduation">December 2019</span></li>
+                                <!--Courses-->
+                                <!--Achievements-->
+                            </ul>
+                        </div>
+                    </div>
+                </mat-list-item>
 
-                        <mat-list-item>
-                            <div class="row univ-title-container">
-                                <div class="column">
-                                    <img class="univ-logo" src="assets/images/mumbaiuniversitylogo.png">
-                                </div>
-                                <div class="column">
-                                    <span class="univ-title">University of Mumbai</span>
-                                    <span class="college">Fr. Conceicao Rodrigues College of Engineering</span>
-                                    <span class="major">Bachelor of Engineering in Computer Engineering</span>
-                                    <span class="graduation">May 2016</span>
-                                </div>
-                            </div>
-                        </mat-list-item>
-                    </mat-list>
-                </mat-card>
-            </div>
-            <div class="column highlights">
-                <mat-card class="highlights-card" id="highlights-card">
-                    <!-- <div class="highlights-cloud" id="highlights-cloud"></div> -->
-                    <mat-card-title class="card-title"><span>Highlights</span></mat-card-title>
-                    <mat-list>
-                            <mat-list-item>Data Scientist, Software Architect</mat-list-item>
-                            <mat-list-item>Problem Solver, Design Thinker</mat-list-item>
-                    </mat-list>
-                </mat-card>
-            </div>
-            <br style="clear:both;"/>
-        </div>
+                <mat-list-item>
+                    <div class="row univ-title-container">
+                        <div class="column">
+                            <img class="univ-logo" src="assets/images/mumbaiuniversitylogo.png">
+                        </div>
+                        <div class="column">
+                            <ul class="info-list">
+                                <li><span class="univ-title">University of Mumbai</span></li>
+                                <li><span class="college">Fr. Conceicao Rodrigues College of Engineering</span></li>
+                                <li><span class="major">Bachelor of Engineering in Computer Engineering</span></li>
+                                <li><span class="graduation">May 2016</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </mat-list-item>
+            </mat-list>
+        </mat-card>
 
         <!--Experiennce-->
         <mat-card class="experience-card section" id="{{sections[2].id}}">
