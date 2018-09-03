@@ -42,39 +42,25 @@ mat-card {
 }
 
 .education-card {
-    mat-list {
-        margin-left: -20px;
-        padding-top: 25px;
-    }
-    mat-list-item:last-of-type {
-        padding-top: 100px;
+    ul.schools {
+        list-style: none;
+        display: flex;
+        li.mumbai-univ {
+            margin-left: 100px;
+        }
     }
 }
 
-// .edu-highlight {
-//     display: flex;
-//     clear: both;
-//     .column.education {
-//         width: 50%;
-//     }
-// }
-
-// .education {
-//     float: left;
-// }
-// .highlights {
-//     float: right;
-//     padding-left: 10px;
-// }
-
 .row.univ-title-container {
-    display: inline-block;
-
-    .univ-logo {
+    div.logo {
         float: left;
         width: 25%;
+        .univ-logo {
+            max-width: 100%;
+        }
     }
-    .info-list {
+
+    ul.info-list {
         list-style: none;
     }
     .univ-title {
