@@ -52,16 +52,26 @@ mat-card {
 }
 
 .row.univ-title-container {
-    div.logo {
+    div.northeastern-logo {
         float: left;
-        width: 25%;
-        .univ-logo {
-            max-width: 100%;
-        }
+        width: 30%;
+    }
+    div.mumbai-univ-logo {
+        float: left;
+        width: 17%;
+    }
+
+    .univ-logo {
+        max-width: 100%;
+    }
+
+    div.content {
+        display: flex;
     }
 
     ul.info-list {
         list-style: none;
+        padding: 0px;
     }
     .univ-title {
         font-size: 20px;
