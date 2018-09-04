@@ -55,9 +55,13 @@
                             <ul class="info-list">
                                 <li><span class="univ-title">Northeastern University</span></li>
                                 <li><span class="college">College of Computer and Information Science</span></li>
-                                <li><span class="major">Master of Science in Computer Science</span></li>
+                                <li><span class="major"><i>Master of Science</i> in <strong>Computer Science</strong></span></li>
                                 <li><span class="graduation">December 2019</span></li>
-                                <!--Courses-->
+                                <mat-chip-list class="mat-chip-list-stacked">
+                                    <mat-chip *ngFor="let chip of northeasternCourses" selected="true" [color]="chip.color">
+                                      {{chip.name}}
+                                    </mat-chip>
+                                  </mat-chip-list>
                                 <!--Achievements-->
                             </ul>
                         </div>
@@ -74,8 +78,9 @@
                             <ul class="info-list">
                                 <li><span class="univ-title">University of Mumbai</span></li>
                                 <li><span class="college">Fr. Conceicao Rodrigues College of Engineering</span></li>
-                                <li><span class="major">Bachelor of Engineering in Computer Engineering</span></li>
+                                <li><span class="major"><i>Bachelor of Engineering</i> in <strong>Computer Engineering</strong></span></li>
                                 <li><span class="graduation">May 2016</span></li>
+                                <!--Courses-->
                             </ul>
                         </div>
                     </div>

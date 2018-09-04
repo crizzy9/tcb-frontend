@@ -119,3 +119,10 @@ export const words = [
     // {text: 'head', size: 12},
     // {text: 'make', size: 12},
 ];
+
+export const northeasternCourses = [
+    { name: 'Programming Design Paradigms', color: 'primary' },
+    { name: 'Information Retrieval',  color: 'accent' },
+    { name: 'Algorithms', color: 'warn' },
+    { name: 'Natural Lanugage Processing', color: '#ff8f00' }
+];

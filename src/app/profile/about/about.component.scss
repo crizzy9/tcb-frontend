@@ -46,7 +46,7 @@ mat-card {
         list-style: none;
         display: flex;
         li.mumbai-univ {
-            margin-left: 100px;
+            margin-left: 150px;
         }
     }
 }
@@ -67,6 +67,7 @@ mat-card {
 
     div.content {
         display: flex;
+        padding-left: 25px;
     }
 
     ul.info-list {
@@ -74,18 +75,16 @@ mat-card {
         padding: 0px;
     }
     .univ-title {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 500;
     }
     .college {
         white-space: nowrap;
     }
     .major {
-        // display: inline-block;
         width: 70%;
     }
     .graduation {
-        // display: inline-block;
     }
 }
 
