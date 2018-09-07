@@ -42,11 +42,16 @@ mat-card {
 }
 
 .education-card {
-    ul.schools {
+    mat-list.schools {
         list-style: none;
         display: flex;
-        li.mumbai-univ {
+        padding: 0;
+        mat-list-item.mumbai-univ {
             margin-left: 150px;
+        }
+        .courses {
+            margin-top: 25px;
+            margin-left: 25px;
         }
     }
 }
@@ -54,7 +59,7 @@ mat-card {
 .row.univ-title-container {
     div.northeastern-logo {
         float: left;
-        width: 30%;
+        width: 28%;
     }
     div.mumbai-univ-logo {
         float: left;
