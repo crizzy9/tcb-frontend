@@ -42,25 +42,21 @@
 
         <!--Education-->
         <mat-card class="education-card" id="{{sections[1].id}}">
+
             <mat-card-title class="card-title"><span>Education</span></mat-card-title>
-            <mat-list class="schools">
 
-                <mat-list-item class="northeastern">
-                    <!-- Home -->
-                    <div class="row univ-title-container">
-                        <div class="column northeastern-logo">
-                            <img class="univ-logo" src="assets/images/northeasternlogo.png">
-                        </div>
-                        <div class="column content">
-                            <ul class="info-list">
-                                <li><span class="univ-title">Northeastern University</span></li>
-                                <li><span class="college">College of Computer and Information Science</span></li>
-                                <li><span class="major"><i>Master of Science</i> in <strong>Computer Science</strong></span></li>
-                                <li><span class="graduation">December 2019</span></li>
+            <div class="schools">
 
-                                <!--Achievements-->
-                            </ul>
-                        </div>
+                <div class="univ-container northeastern">
+                    <img class="univ-logo northeastern-logo" src="assets/images/northeasternlogo.png">
+                    <div class="content">
+                        <ul class="info-list">
+                            <li><span class="univ-title">Northeastern University</span></li>
+                            <li><span class="college">College of Computer and Information Science</span></li>
+                            <li><span class="major"><i>Master of Science</i> in <strong>Computer Science</strong></span></li>
+                            <li><span class="graduation">December 2019</span></li>
+                            <!--Achievements-->
+                        </ul>
                     </div>
                     <div class="courses">
                         <mat-chip-list>
@@ -69,46 +65,64 @@
                             </mat-chip>
                         </mat-chip-list>
                     </div>
-                </mat-list-item>
+                </div>
 
-                <mat-list-item class="mumbai-univ">
-                    <!-- Next -->
-                    <div class="row univ-title-container">
-                        <div class="column mumbai-univ-logo">
-                            <img class="univ-logo" src="assets/images/mumbaiuniversitylogo.png">
-                        </div>
-                        <div class="column content">
-                            <ul class="info-list">
-                                <li><span class="univ-title">University of Mumbai</span></li>
-                                <li><span class="college">Fr. Conceicao Rodrigues College of Engineering</span></li>
-                                <li><span class="major"><i>Bachelor of Engineering</i> in <strong>Computer Engineering</strong></span></li>
-                                <li><span class="graduation">May 2016</span></li>
-                                <!--Courses-->
-                            </ul>
-                        </div>
+                <div class="univ-container mumbai-univ">
+                    <img class="univ-logo mumbai-univ-logo" src="assets/images/mumbaiuniversitylogo.png">
+                    <div class="column content">
+                        <ul class="info-list">
+                            <li><span class="univ-title">University of Mumbai</span></li>
+                            <li><span class="college">Fr. Conceicao Rodrigues College of Engineering</span></li>
+                            <li><span class="major"><i>Bachelor of Engineering</i> in <strong>Computer Engineering</strong></span></li>
+                            <li><span class="graduation">May 2016</span></li>
+                            <!--Achievements-->
+                        </ul>
                     </div>
-                </mat-list-item>
+                    <div class="courses">
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let chip of mumbaiUnivCourses" selected="true" [color]="chip.color">
+                            {{chip.name}}
+                            </mat-chip>
+                        </mat-chip-list>
+                    </div>
+                </div>
 
-            </mat-list>
+            </div>
+
         </mat-card>
 
         <!--Experiennce-->
         <mat-card class="experience-card section" id="{{sections[2].id}}">
             <mat-card-title class="card-title"><span>Experience</span></mat-card-title>
-            <mat-list>
-                <h3>Intuit</h3>
-                <h4>Software Engineering Coop</h4>
-                <h5>San Diego, California</h5>
-                <mat-list-item>Worked in the CG Department of TurboTax in the Self Service Team. Worked with python lambdas and spring boot. Saved close to 2 million $. Won the First Ever Innovator Award at the Codechella event</mat-list-item>
-                <h3>Votercircle</h3>
-                <h4>Software Developer</h4>
-                <h5>Bangalore, India</h5>
-                <mat-list-item>Built the Organizer functionality from the ground up, Integrated NationBuilder, Elastic Search</mat-list-item>
-                <h3>IIT Bombay</h3>
-                <h4>Research Intern</h4>
-                <h5>Mumbai, India</h5>
-                <mat-list-item>Created micro-services for automated notifications and invoice generation.</mat-list-item>
-            </mat-list>
+            <div>
+                <img class="company-logo intuit-logo" src="assets/images/intuit-logo.jpg">
+                <div class="work-place">
+                    <ul>
+                        <li><h3>Intuit</h3></li>
+                        <li><h4>Software Engineering Coop</h4></li>
+                        <li><h5>San Diego, California</h5></li>
+                    </ul>
+                </div>
+                <p>Worked in the CG Department of TurboTax in the Self Service Team. Worked with python lambdas and spring boot. Saved close to 2 million $. Won the First Ever Innovator Award at the Codechella event</p>
+                <img class="company-logo votercircle-logo" src="assets/images/votercircle-logo.jpg">
+                <div class="work-place">
+                    <ul>
+                        <li><h3>Votercircle</h3></li>
+                        <li><h4>Software Developer</h4></li>
+                        <li><h5>Bangalore, India</h5></li>
+                    </ul>
+                </div>
+                <p>Built the Organizer functionality from the ground up, Integrated NationBuilder, Elastic Search</p>
+                <img class="company-logo iitbombay-logo" src="assets/images/iitbombay-logo.png">
+                <div class="work-place">
+                    <ul>
+                        <li><h3>IIT Bombay</h3></li>
+                        <li><h4>Research Intern</h4></li>
+                        <li><h5>Mumbai, India</h5></li>
+                    </ul>
+                </div>
+                <p>Created micro-services for automated notifications and invoice generation.</p>
+            </div>
         </mat-card>
         <mat-card class="skills-card section" id="{{sections[3].id}}">
             <mat-card-title class="card-title"><span>Skills</span></mat-card-title>

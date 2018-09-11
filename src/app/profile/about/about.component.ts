@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { northeasternCourses, socialIcons, sections, tiles, words } from './about.model';
+import { northeasternCourses, mumbaiUnivCourses, socialIcons, sections, tiles, words } from './about.model';
 import * as D3 from 'd3';
 
 declare let d3: any;
@@ -17,6 +17,7 @@ export class AboutComponent implements OnInit {
     tiles = tiles;
     words = words;
     northeasternCourses = northeasternCourses;
+    mumbaiUnivCourses = mumbaiUnivCourses;
 
     constructor() {
         this.icons = Object.keys(this.socialIcons);

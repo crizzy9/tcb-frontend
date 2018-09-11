@@ -126,3 +126,13 @@ export const northeasternCourses = [
     { name: 'Algorithms', color: 'warn' },
     { name: 'Natural Lanugage Processing', color: '#ff8f00' }
 ];
+
+export const mumbaiUnivCourses = [
+    { name: 'Data Structures', color: 'primary' },
+    { name: 'Artificial Intelligence', color: 'accent' },
+    { name: 'Machine Learning', color: 'warn' },
+    { name: 'Web Technologies', color: '#123abc' },
+    { name: 'Software Engineering', color: '#12321' },
+    { name: 'Operating Systems', color: '#987541' },
+    { name: 'Object Oriented Programming', color: '#897862' },
+]

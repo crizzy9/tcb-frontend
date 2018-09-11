@@ -41,61 +41,7 @@ mat-card {
     margin-bottom: 10px;
 }
 
-.education-card {
-    mat-list.schools {
-        list-style: none;
-        display: flex;
-        padding: 0;
-        mat-list-item.mumbai-univ {
-            margin-left: 150px;
-        }
-        .courses {
-            margin-top: 25px;
-            margin-left: 25px;
-        }
-    }
-}
-
-.row.univ-title-container {
-    div.northeastern-logo {
-        float: left;
-        width: 28%;
-    }
-    div.mumbai-univ-logo {
-        float: left;
-        width: 17%;
-    }
-
-    .univ-logo {
-        max-width: 100%;
-    }
-
-    div.content {
-        display: flex;
-        padding-left: 25px;
-    }
-
-    ul.info-list {
-        list-style: none;
-        padding: 0px;
-    }
-    .univ-title {
-        font-size: 22px;
-        font-weight: 500;
-    }
-    .college {
-        white-space: nowrap;
-    }
-    .major {
-        width: 70%;
-    }
-    .graduation {
-    }
-}
-
-span.skill {
-    width: 100px;
-}
+// Intro Card/Terminal
 
 .terminal_window {
     text-align: left;
@@ -163,6 +109,70 @@ span.skill {
 mat-card-title.card-title span {
     border-bottom: rgb(250, 221, 75) solid 2px;
 }
+
+// Education Card
+.education-card .univ-container {
+    display: table-cell;
+    width: 50%;
+}
+
+.education-card .univ-logo {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.education-card .content {
+    display: inline-block;
+}
+
+.univ-logo.northeastern-logo {
+    width: 20%;
+}
+
+.univ-logo.mumbai-univ-logo {
+    width: 18%;
+}
+
+.content ul.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul.info-list .univ-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+ul.info-list .college {
+    white-space: nowrap;
+}
+
+ul.info-list .major {
+    width: 70%;
+}
+
+// Experience Card
+
+.experience-card .company-logo {
+    width: 10%;
+    display: inline-block;
+}
+.experience-card .work-place {
+    display: inline-block;
+}
+
+.work-place ul {
+    padding-left: 30px;
+    list-style: none;
+}
+
+// Skills Card
+
+span.skill {
+    width: 100px;
+}
+
+// Project Card
 
 .project-tile {
     // position: relative;
