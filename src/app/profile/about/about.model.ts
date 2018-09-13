@@ -77,12 +77,12 @@ export const sections: Array<any> = [
 ];
 
 export const tiles = [
-    {text: 'Fan Curation - CodeChella', cols: 1, rows: 1, color: 'lightblue'},
-    {text: 'Text Reconstruction', cols: 1, rows: 1, color: '#DDBDF1'},
-    {text: 'Starcraft II Bot', cols: 1, rows: 1, color: 'lightgreen'},
-    {text: 'Deep Car', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Crawler - Search Engine', cols: 1, rows: 1, color: 'yellow'},
-    {text: 'Open AI Gym', cols: 1, rows: 1, color: 'orange'},
+    {text: 'Fan Curation - CodeChella', cols: 1, rows: 1, color: 'lightblue', image: 'assets/images/deepcar.jpg'},
+    {text: 'Text Reconstruction', cols: 1, rows: 1, color: '#DDBDF1', image: 'assets/images/deepcar.jpg'},
+    {text: 'Starcraft II Bot', cols: 1, rows: 1, color: 'lightgreen', image: 'assets/images/deepcar.jpg'},
+    {text: 'Deep Car', cols: 1, rows: 1, color: 'lightpink', image: 'assets/images/deepcar.jpg'},
+    {text: 'Crawler - Search Engine', cols: 1, rows: 1, color: 'yellow', image: 'assets/images/deepcar.jpg'},
+    {text: 'Open AI Gym', cols: 1, rows: 1, color: 'orange', image: 'assets/images/deepcar.jpg'},
 ];
 
 export const words = [

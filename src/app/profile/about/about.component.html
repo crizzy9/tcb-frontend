@@ -49,7 +49,7 @@
 
                 <div class="univ-container northeastern">
                     <img class="univ-logo northeastern-logo" src="assets/images/northeasternlogo.png">
-                    <div class="content">
+                    <div class="content northeastern-content">
                         <ul class="info-list">
                             <li><span class="univ-title">Northeastern University</span></li>
                             <li><span class="college">College of Computer and Information Science</span></li>
@@ -69,7 +69,7 @@
 
                 <div class="univ-container mumbai-univ">
                     <img class="univ-logo mumbai-univ-logo" src="assets/images/mumbaiuniversitylogo.png">
-                    <div class="column content">
+                    <div class="content mumbai-univ-content">
                         <ul class="info-list">
                             <li><span class="univ-title">University of Mumbai</span></li>
                             <li><span class="college">Fr. Conceicao Rodrigues College of Engineering</span></li>
@@ -140,7 +140,8 @@
         <mat-card class="projects-card section" id="{{sections[4].id}}">
             <mat-card-title class="card-title"><span>Projects</span></mat-card-title>
             <mat-grid-list class="projects-grid" cols="3" rowHeight="200px">
-                <mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+                <!--<mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">-->
+                <mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [ngStyle]="{'background': tile.color + ' url(' + tile.image + ') no-repeat 0 0'}">
                         <div  class="project-tile-body">
                             {{tile.text}}
                         </div>

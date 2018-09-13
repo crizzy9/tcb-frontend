@@ -107,6 +107,7 @@ mat-card {
 }
 
 mat-card-title.card-title span {
+    font-size: 30px;
     border-bottom: rgb(250, 221, 75) solid 2px;
 }
 
@@ -118,11 +119,24 @@ mat-card-title.card-title span {
 
 .education-card .univ-logo {
     display: inline-block;
-    margin-top: 10px;
+}
+
+.education-card .univ-logo.mumbai-univ-logo {
+    margin-top: -5px;
 }
 
 .education-card .content {
     display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.education-card .content.northeastern-content {
+    margin-top: -10px;
+}
+
+.education-card .content.mumbai-univ-content {
+    margin-top: -20px;
 }
 
 .univ-logo.northeastern-logo {
