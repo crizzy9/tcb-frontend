@@ -140,8 +140,7 @@
         <mat-card class="projects-card section" id="{{sections[4].id}}">
             <mat-card-title class="card-title"><span>Projects</span></mat-card-title>
             <mat-grid-list class="projects-grid" cols="3" rowHeight="200px">
-                <!--<mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">-->
-                <mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [ngStyle]="{'background': tile.color + ' url(' + tile.image + ') no-repeat 0 0'}">
+                <mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [ngStyle]="{'background': tile.color + ' url(' + tile.image + ') no-repeat 0 0', 'background-size': 'contain', '-webkit-background-size': 'contain', '-moz-background-size': 'contain', '-o-background-size': 'contain'}">
                         <div  class="project-tile-body">
                             {{tile.text}}
                         </div>
