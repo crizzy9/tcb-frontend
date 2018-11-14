@@ -139,13 +139,13 @@ mat-card-title.card-title span {
     margin-top: -20px;
 }
 
-.univ-logo.northeastern-logo {
-    width: 20%;
-}
+// .univ-logo.northeastern-logo {
+//     width: 20%;
+// }
 
-.univ-logo.mumbai-univ-logo {
-    width: 18%;
-}
+// .univ-logo.mumbai-univ-logo {
+//     width: 18%;
+// }
 
 .content ul.info-list {
     list-style: none;
@@ -168,9 +168,9 @@ ul.info-list .major {
 // Experience Card
 
 .experience-card .company-logo {
-    width: 10%;
     display: inline-block;
 }
+
 .experience-card .work-place {
     display: inline-block;
 }
@@ -195,9 +195,11 @@ span.skill {
     height: auto;
     max-width: 100%;
 
-    .project-tile-body {
-        display: block;
-    }
+    // Keep aspect ratio 56.25% (16:9) intact
+
+    // .project-tile-body {
+    //     display: block;
+    // }
 
     .project-tile-layer {
         opacity: 0;
@@ -234,4 +236,61 @@ span.skill {
 .project-tile:hover .project-tile-layer,
 .project-tile.active .project-tile-layer {
     opacity: 1;
+}
+
+
+// Ref: https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+}
+
+/* Laptops ----------- */
+@media only screen and (min-device-width: 1224px) {
+    .experience-card .company-logo {
+        width: 10%;
+    }
+
+    .univ-logo.northeastern-logo {
+        width: 20%;
+    }
+
+    .univ-logo.mumbai-univ-logo {
+        width: 18%;
+    }
+}
+
+/* Desktops and Large screens ----------- */
+@media only screen and (min-device-width: 1824px) {
+    .experience-card .company-logo {
+        width: 6.5%;
+    }
+
+    .univ-logo.northeastern-logo {
+        width: 16%;
+    }
+
+    .univ-logo.mumbai-univ-logo {
+        width: 14%;
+    }
 }

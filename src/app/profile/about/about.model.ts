@@ -76,6 +76,7 @@ export const sections: Array<any> = [
     },
 ];
 
+// Project details
 export const tiles = [
     {text: 'Fan Curation - CodeChella', cols: 1, rows: 1, color: 'lightblue', image: 'assets/images/deepcar.jpg'},
     {text: 'Text Reconstruction', cols: 1, rows: 1, color: '#DDBDF1', image: 'assets/images/deepcar.jpg'},
@@ -136,3 +137,8 @@ export const mumbaiUnivCourses = [
     { name: 'Operating Systems', color: '#987541' },
     { name: 'Object Oriented Programming', color: '#897862' },
 ]
+
+export const deviceBasedVals: Object = {
+    'cols': 3
+};
+
