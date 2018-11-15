@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { northeasternCourses, mumbaiUnivCourses, socialIcons, sections, tiles, words, deviceBasedVals } from './about.model';
+import { northeasternCourses, mumbaiUnivCourses, socialIcons, sections, tiles, words } from './about.model';
 import * as D3 from 'd3';
 
 declare let d3: any;
@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit {
     words = words;
     northeasternCourses = northeasternCourses;
     mumbaiUnivCourses = mumbaiUnivCourses;
-    deviceBasedVals = deviceBasedVals;
+    tileColumns;
 
     constructor() {
         this.icons = Object.keys(this.socialIcons);
@@ -31,16 +31,22 @@ export class AboutComponent implements OnInit {
         // .selector('#highlights-cloud')
         // .words(this.words)
         // .start();
-        this.deviceBasedVals.cols = (window.innerWidth <= 400) ? 1:3;
-        console.log('colssss', this.deviceBasedVals);
+        this.setDeviceBasedConfig(window);
     }
 
     // Ref: https://stackoverflow.com/questions/48493652/angular-5-mat-grid-list-responsive?rq=1
     onResize(event) {
-        // Resize doesnt work when actually just resizing chrome window.
-        // Works when window is small and page is reloaded
-        this.deviceBasedVals.cols = (event.target.innerWidth <= 400) ? 1:3;
-        console.log('Resize', this.deviceBasedVals);
+        this.setDeviceBasedConfig(event.target);
     }
 
+    setDeviceBasedConfig(target) {
+        // To set number of columns in project grid view for responsive view.
+        if (target.innerWidth <= 400) {
+            this.tileColumns = 1;
+        } else if (target.innerWidth <= 800 && target.innerHeight > target.innerWidth) { // if ipad screen in potrait
+            this.tileColumns = 2;
+        } else {
+            this.tileColumns = 3;
+        }
+    }
 }

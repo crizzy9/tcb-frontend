@@ -126,6 +126,7 @@ export const northeasternCourses = [
     { name: 'Information Retrieval',  color: 'accent' },
     { name: 'Algorithms', color: 'warn' },
     { name: 'Natural Lanugage Processing', color: '#ff8f00' }
+    // Add new courses here
 ];
 
 export const mumbaiUnivCourses = [
@@ -137,8 +138,4 @@ export const mumbaiUnivCourses = [
     { name: 'Operating Systems', color: '#987541' },
     { name: 'Object Oriented Programming', color: '#897862' },
 ]
-
-export const deviceBasedVals: Object = {
-    'cols': 3
-};
 

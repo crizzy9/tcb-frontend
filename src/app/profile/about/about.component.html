@@ -60,7 +60,7 @@
                     </div>
                     <div class="courses">
                         <mat-chip-list>
-                            <mat-chip *ngFor="let chip of northeasternCourses" selected="true" [color]="chip.color">
+                            <mat-chip *ngFor="let chip of northeasternCourses" selected="true" [color]="chip.color" class="course-chip">
                             {{chip.name}}
                             </mat-chip>
                         </mat-chip-list>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="courses">
                         <mat-chip-list>
-                            <mat-chip *ngFor="let chip of mumbaiUnivCourses" selected="true" [color]="chip.color">
+                            <mat-chip *ngFor="let chip of mumbaiUnivCourses" selected="true" [color]="chip.color" class="course-chip">
                             {{chip.name}}
                             </mat-chip>
                         </mat-chip-list>
@@ -139,7 +139,7 @@
         </mat-card>
         <mat-card class="projects-card section" id="{{sections[4].id}}">
             <mat-card-title class="card-title"><span>Projects</span></mat-card-title>
-            <mat-grid-list class="projects-grid" [cols]="deviceBasedVals.cols" rowHeight="16:9">
+            <mat-grid-list class="projects-grid" [cols]="tileColumns" rowHeight="16:9" (window:resize)="onResize($event)">
                 <mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [ngStyle]="{'background': tile.color + ' url(' + tile.image + ') no-repeat 0 0', 'background-size': 'contain', '-webkit-background-size': 'contain', '-moz-background-size': 'contain', '-o-background-size': 'contain'}">
                     <div class="project-tile-body">
                         {{tile.text}}
