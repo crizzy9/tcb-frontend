@@ -34,9 +34,10 @@ export class ProfileComponent implements OnInit {
 }
 
 export const ProfileRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'about', component: AboutComponent },
+  { path: '', component: AboutComponent },
+  // { path: '', component: HomeComponent },
+  // { path: 'blog', component: BlogComponent },
+  // { path: 'about', component: AboutComponent },
 ];
 
 

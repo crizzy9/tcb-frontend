@@ -18,8 +18,9 @@ export class AppComponent {
 }
 
 const routes: Routes = [
-    { path: '', component: CodebaseComponent, children: CodebaseRoutes },
-    { path: 'profile', component: ProfileComponent, children: ProfileRoutes },
+    { path: '', component: ProfileComponent, children: ProfileRoutes },
+    // { path: '', component: CodebaseComponent, children: CodebaseRoutes },
+    // { path: 'profile', component: ProfileComponent, children: ProfileRoutes },
 ];
 
 @NgModule({
