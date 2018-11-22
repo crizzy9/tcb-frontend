@@ -16,7 +16,7 @@ export const socialIcons: Object = {
     //     icon: 'assets/icons/kaggle.png',
     // },
     gmail: {
-        url: 'padia.s@husky.neu.edu',
+        url: 'mailto:padia.s@husky.neu.edu',
         icon: 'assets/icons/gmail.png',
     },
     stackoverflow: {
