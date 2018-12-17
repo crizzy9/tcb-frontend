@@ -78,9 +78,9 @@ export const sections: Array<any> = [
 
 // Project details
 export const tiles = [
-    {text: 'Fan Curation - CodeChella', cols: 1, rows: 1, color: 'lightblue', image: 'assets/images/deepcar.jpg'},
+    {text: 'Fan Forge', cols: 1, rows: 1, color: 'lightblue', image: 'assets/images/deepcar.jpg'},
     {text: 'Text Reconstruction', cols: 1, rows: 1, color: '#DDBDF1', image: 'assets/images/deepcar.jpg'},
-    {text: 'Starcraft II Bot', cols: 1, rows: 1, color: 'lightgreen', image: 'assets/images/deepcar.jpg'},
+    {text: 'Starcraft II Bot', cols: 1, rows: 1, color: 'lightgreen', image: 'assets/images/starcraft.png'},
     {text: 'Deep Car', cols: 1, rows: 1, color: 'lightpink', image: 'assets/images/deepcar.jpg'},
     {text: 'Crawler - Search Engine', cols: 1, rows: 1, color: 'yellow', image: 'assets/images/deepcar.jpg'},
     {text: 'Open AI Gym', cols: 1, rows: 1, color: 'orange', image: 'assets/images/deepcar.jpg'},
@@ -137,5 +137,98 @@ export const mumbaiUnivCourses = [
     { name: 'Software Engineering', color: '#12321' },
     { name: 'Operating Systems', color: '#987541' },
     { name: 'Object Oriented Programming', color: '#897862' },
+]
+
+export const technicalSkills = [
+    {
+        section_name: 'Languages',
+        skills: [
+            {
+                name: 'Python',
+                img: '',
+                proficiency: 100
+            },
+            {
+                name: 'Java',
+                img: '',
+                proficiency: 90
+            }
+        ]
+    },
+    {
+        section_name: 'Tools',
+        skills: [
+            {
+                name: 'Tensorflow',
+                img: '',
+                proficiency: 100
+            },
+            {
+                name: 'NLTK',
+                img: '',
+                proficiency: 90
+            }
+        ]
+    },
+    {
+        section_name: 'Frameworks',
+        skills: [
+            {
+                name: 'Express',
+                img: '',
+                proficiency: 100
+            },
+            {
+                name: 'Spring',
+                img: '',
+                proficiency: 90
+            }
+        ]
+    },
+    {
+        section_name: 'Databases',
+        skills: [
+            {
+                name: 'DynamoDB',
+                img: '',
+                proficiency: 100
+            },
+            {
+                name: 'MongoDB',
+                img: '',
+                proficiency: 90
+            }
+        ]
+    },
+    {
+        section_name: 'Cloud',
+        skills: [
+            {
+                name: 'AWS',
+                img: '',
+                proficiency: 100
+            },
+            {
+                name: 'GCP',
+                img: '',
+                proficiency: 90
+            }
+        ]
+    },
+    {
+        section_name: 'Platforms',
+        skills: [
+            {
+                name: 'Linux',
+                img: '',
+                proficiency: 100
+            },
+            {
+                name: 'MacOS',
+                img: '',
+                proficiency: 90
+            }
+        ]
+    }
 ]
 

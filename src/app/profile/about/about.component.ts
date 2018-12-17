@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { northeasternCourses, mumbaiUnivCourses, socialIcons, sections, tiles, words } from './about.model';
+import { 
+    northeasternCourses,
+    mumbaiUnivCourses,
+    socialIcons,
+    sections,
+    tiles,
+    technicalSkills,
+    words
+} from './about.model';
 import * as D3 from 'd3';
 
 declare let d3: any;
@@ -19,6 +27,7 @@ export class AboutComponent implements OnInit {
     words = words;
     northeasternCourses = northeasternCourses;
     mumbaiUnivCourses = mumbaiUnivCourses;
+    technicalSkills = technicalSkills;
     tileColumns;
 
     constructor() {

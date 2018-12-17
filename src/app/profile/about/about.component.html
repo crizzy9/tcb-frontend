@@ -8,7 +8,7 @@
 
         <!--Basic Introduction-->
         <mat-card class="intro-card section terminal_window" id="{{sections[0].id}}">
-            <!--Section should be called my SOURCE CODE!!!-->
+            <!-- Section should be called my SOURCE CODE -->
             <mat-card-title class="topbar">
                 <div class="red_btn button"></div>
                 <div class="green_btn button"></div>
@@ -42,6 +42,7 @@
 
         <!--Education-->
         <mat-card class="education-card" id="{{sections[1].id}}">
+            <!-- For smaller screens put both sections in a seperate row -->
 
             <mat-card-title class="card-title"><span>Education</span></mat-card-title>
 
@@ -126,18 +127,25 @@
         </mat-card>
         <mat-card class="skills-card section" id="{{sections[3].id}}">
             <mat-card-title class="card-title"><span>Skills</span></mat-card-title>
-            <mat-list>
-                <mat-list-item>
-                        <span class="skill">Python</span>
-                        <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
-                </mat-list-item>
-                <mat-list-item>
-                        <span class="skill">Java</span>
-                        <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
-                </mat-list-item>
-            </mat-list>
+            <!-- Give different sections in skills and use images instead of the names but keep names on hover -->
+            <div class="skill-sections">
+
+                <!-- Equal start for the progress bar its wavy its okay but only for large texts its not right-->
+                <div *ngFor="let section of technicalSkills" class="section">
+                    <span class="section-name"><strong>{{section.section_name}}</strong></span>
+                    <mat-list class="skill-list">
+                        <mat-list-item *ngFor="let skill of section.skills">
+                            <span class="skill">{{skill.name}}</span>
+                            <mat-progress-bar mode="determinate" [value]="skill.proficiency" [color]="red"></mat-progress-bar>
+                        </mat-list-item>
+                    </mat-list>
+                </div>
+
+            </div>
         </mat-card>
         <mat-card class="projects-card section" id="{{sections[4].id}}">
+            <!-- Make project picture carousel if more than one. Should also support Videos. -->
+            <!-- Create an issue for this on Github -->
             <mat-card-title class="card-title"><span>Projects</span></mat-card-title>
             <mat-grid-list class="projects-grid" [cols]="tileColumns" rowHeight="16:9" (window:resize)="onResize($event)">
                 <mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [ngStyle]="{'background': tile.color + ' url(' + tile.image + ') no-repeat 0 0', 'background-size': 'contain', '-webkit-background-size': 'contain', '-moz-background-size': 'contain', '-o-background-size': 'contain'}">

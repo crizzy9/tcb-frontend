@@ -186,8 +186,29 @@ ul.info-list .major {
 
 // Skills Card
 
+.skill-sections .section {
+    display: inline-grid;
+    width: 32%;
+}
+
+.skill-sections .section-name {
+    display: inherit;
+}
+
+.skill-sections .skill-list {
+    display: inline-block;
+}
+
+.skill-sections span.section-name {
+    color: cornflowerblue;
+    font-size: 18px;
+}
+
+//change progress bar color
+
 span.skill {
     width: 100px;
+    padding-right: 2px;
 }
 
 // Project Card
