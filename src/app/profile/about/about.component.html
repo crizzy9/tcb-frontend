@@ -148,9 +148,9 @@
             <!-- Create an issue for this on Github -->
             <mat-card-title class="card-title"><span>Projects</span></mat-card-title>
             <mat-grid-list class="projects-grid" [cols]="tileColumns" rowHeight="16:9" (window:resize)="onResize($event)">
-                <mat-grid-tile *ngFor="let tile of tiles" class="project-tile" [colspan]="tile.cols" [rowspan]="tile.rows" [ngStyle]="{'background': tile.color + ' url(' + tile.image + ') no-repeat 0 0', 'background-size': 'contain', '-webkit-background-size': 'contain', '-moz-background-size': 'contain', '-o-background-size': 'contain'}">
+                <mat-grid-tile *ngFor="let project of projects" class="project-tile" [colspan]="project.cols" [rowspan]="project.rows" [ngStyle]="{'background': project.color + ' url(' + project.image + ') no-repeat 0 0', 'background-size': 'contain', '-webkit-background-size': 'contain', '-moz-background-size': 'contain', '-o-background-size': 'contain'}">
                     <div class="project-tile-body">
-                        {{tile.text}}
+                        {{project.text}}
                     </div>
                     <div class="project-tile-layer">
                         <div class="project-layer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>

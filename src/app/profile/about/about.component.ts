@@ -4,7 +4,7 @@ import {
     mumbaiUnivCourses,
     socialIcons,
     sections,
-    tiles,
+    projects,
     technicalSkills,
     words
 } from './about.model';
@@ -23,7 +23,7 @@ export class AboutComponent implements OnInit {
     icons: string[];
     socialIcons = socialIcons;
     sections = sections;
-    tiles = tiles;
+    projects = projects;
     words = words;
     northeasternCourses = northeasternCourses;
     mumbaiUnivCourses = mumbaiUnivCourses;

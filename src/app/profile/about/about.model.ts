@@ -56,7 +56,7 @@ export const sections: Array<any> = [
     },
     {
         id: 'education',
-        name: 'Education && Highlights'
+        name: 'Education'
     },
     {
         id: 'experience',
@@ -77,13 +77,49 @@ export const sections: Array<any> = [
 ];
 
 // Project details
-export const tiles = [
-    {text: 'Fan Forge', cols: 1, rows: 1, color: 'lightblue', image: 'assets/images/deepcar.jpg'},
-    {text: 'Text Reconstruction', cols: 1, rows: 1, color: '#DDBDF1', image: 'assets/images/deepcar.jpg'},
-    {text: 'Starcraft II Bot', cols: 1, rows: 1, color: 'lightgreen', image: 'assets/images/starcraft.png'},
-    {text: 'Deep Car', cols: 1, rows: 1, color: 'lightpink', image: 'assets/images/deepcar.jpg'},
-    {text: 'Crawler - Search Engine', cols: 1, rows: 1, color: 'yellow', image: 'assets/images/deepcar.jpg'},
-    {text: 'Open AI Gym', cols: 1, rows: 1, color: 'orange', image: 'assets/images/deepcar.jpg'},
+export const projects = [
+    {
+        text: 'Fan Forge',
+        cols: 1,
+        rows: 1,
+        color: 'lightblue',
+        image: 'assets/images/deepcar.jpg'
+    },
+    {
+        text: 'Text Reconstruction',
+        cols: 1,
+        rows: 1,
+        color: '#DDBDF1',
+        image: 'assets/images/deepcar.jpg'
+    },
+    {
+        text: 'Starcraft II Bot',
+        cols: 1,
+        rows: 1,
+        color: 'lightgreen',
+        image: 'assets/images/starcraft.png'
+    },
+    {
+        text: 'Deep Car',
+        cols: 1,
+        rows: 1,
+        color: 'lightpink',
+        image: 'assets/images/deepcar.jpg'
+    },
+    {
+        text: 'Crawler - Search Engine',
+        cols: 1,
+        rows: 1,
+        color: 'yellow',
+        image: 'assets/images/deepcar.jpg'
+    },
+    {
+        text: 'Open AI Gym',
+        cols: 1,
+        rows: 1,
+        color: 'orange',
+        image: 'assets/images/deepcar.jpg'
+    }
 ];
 
 export const words = [
