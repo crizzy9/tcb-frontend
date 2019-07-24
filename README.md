@@ -3,6 +3,7 @@
 ## Install Dependancies
 ```
 npm install
+npm install -g @angular/cli
 ```
 ignore the `fsevents` error
 
