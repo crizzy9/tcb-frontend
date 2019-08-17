@@ -1,7 +1,7 @@
 .main-container {
     position: fixed;
     width: 19%;
-    img{
+    img.user-image {
         display: block;
         margin: auto;
         height: 150px;
@@ -43,5 +43,27 @@
     }
     .nav-link.active {
         border-bottom: 2px solid #70b1c5;
+    }
+
+    .image-card ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        li.icon-list {
+            display: inline;
+            a {
+                text-decoration: none;
+            }
+            img {
+                width: 30px;
+                height: 30px;
+                filter: grayscale(0%) invert(0%);
+                -webkit-filter: grayscale(0%) invert(0%);
+            }
+            img:hover {
+                filter: grayscale(100%) invert(100%);
+                -webkit-filter: grayscale(100%) invert(100%);
+            }
+        }
     }
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { 
     northeasternCourses,
     mumbaiUnivCourses,
-    socialIcons,
     sections,
     projects,
     technicalSkills,
@@ -20,8 +19,6 @@ declare let d3: any;
 })
 
 export class AboutComponent implements OnInit {
-    icons: string[];
-    socialIcons = socialIcons;
     sections = sections;
     projects = projects;
     words = words;
@@ -31,7 +28,6 @@ export class AboutComponent implements OnInit {
     tileColumns;
 
     constructor() {
-        this.icons = Object.keys(this.socialIcons);
     }
 
     ngOnInit() {

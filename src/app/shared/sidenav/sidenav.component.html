@@ -2,7 +2,7 @@
   <mat-card class="image-card">
       <!-- Underline not displaying properly and sections are not identified : CREATE ISSUE : -->
       <!-- Lookup how github readmes jump to sections -->
-      <img mat-card-image src="assets/images/dp.jpg" alt="Profile Photo" />
+      <img mat-card-image class="user-image" src="assets/images/dp.jpg" alt="Profile Photo" />
       <mat-card-title class="title">{{title}}</mat-card-title>
       <mat-card-content class="description">
         <p>{{description}}</p>
@@ -10,6 +10,14 @@
       <mat-card-actions *ngIf="user">
         <button mat-button>CHANGE PHOTO</button>
       </mat-card-actions>
+        <!--List of social media to follow including email in icon form-->
+        <ul>
+            <li class="icon-list" *ngFor="let icon of icons">
+                <a class="social-icons" href="{{socialIcons[icon].url}}">
+                    <img src="{{socialIcons[icon].icon}}" />
+                </a>
+            </li>
+        </ul>
       <mat-divider [inset]="true"></mat-divider>
       <mat-sidenav-container class="sidenav-container">
         <mat-sidenav>Start</mat-sidenav>
