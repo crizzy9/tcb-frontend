@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, NgZone, Inject, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { socialIcons } from './sidenav.model';
 import * as $ from 'jquery';
 
 @Component({
@@ -9,15 +10,18 @@ import * as $ from 'jquery';
 })
 export class SidenavComponent implements OnInit {
 
+    icons: string[];
     image = true;
     user = false;
     title = 'Shyam Padia';
+    socialIcons = socialIcons;
     description = 'Data Scientist, Software Engineer';
     @Input() topics: Object[];
     private fragment: string;
     private currentFragment: string;
 
     constructor(private router: Router) {
+        this.icons = Object.keys(this.socialIcons);
         this.router.events.subscribe(s => {
             if (s instanceof NavigationEnd) {
                 const tree = this.router.parseUrl(this.router.url);
