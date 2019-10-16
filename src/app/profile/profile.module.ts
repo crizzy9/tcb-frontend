@@ -29,8 +29,13 @@ import {
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  user=false;
   constructor() {}
-  ngOnInit() {}
+  ngOnInit() {
+    if (this.user) {
+        $(".row .profile").addClass("active")
+    }
+  }
 }
 
 export const ProfileRoutes: Routes = [

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, NgZone, Inject, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, NgZone, OnChanges } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { socialIcons } from './sidenav.model';
 import * as $ from 'jquery';
@@ -17,6 +17,7 @@ export class SidenavComponent implements OnInit {
     socialIcons = socialIcons;
     description = 'Data Scientist, Software Engineer';
     @Input() topics: Object[];
+    @Input() currentSection: number;
     private fragment: string;
     private currentFragment: string;
 
@@ -31,7 +32,11 @@ export class SidenavComponent implements OnInit {
                     // console.log(element);
                     if (element) {
                         element.scrollIntoView(true);
-                        window.scrollBy(0, -64);
+                        if (this.user) {
+                            window.scrollBy(0, -64);
+                        } else {
+                            window.scrollBy(0, -15);
+                        }
                         this.currentFragment = tree.fragment;
                     }
                 }
@@ -40,27 +45,39 @@ export class SidenavComponent implements OnInit {
     }
 
     ngOnInit() {
-            $(window).scroll(function () {
-                const scrollDistance = $(window).scrollTop();
+        // $(window).scroll(function () {
+        //     const scrollDistance = $(window).scrollTop();
 
-                // Show/hide menu on scroll
-                // if (scrollDistance >= 850) {
-                // 		$('nav').fadeIn("fast");
-                // } else {
-                // 		$('nav').fadeOut("fast");
+        //     // highlight sidenav with background
+
+        //     // Show/hide menu on scroll
+        //     // if (scrollDistance >= 850) {
+        //     //       $('nav').fadeIn("fast");
+        //     // } else {
+        //     //       $('nav').fadeOut("fast");
+        //     // }
+
+        //     // Assign active class to nav links while scolling
+        //     $('.section').each(function (i) {
+        //         if ($(this).position().top <= scrollDistance) {
+        //             $('mat-sidenav-container a.active').removeClass('active');
+        //             $('mat-sidenav-container a').eq(i).addClass('active');
+        //         }
+        //     });
+        // }).scroll();
+    }
+
+    ngOnChanges() {
+        console.log("Current Section is : " + this.currentSection);
+        // console.log("section given:" + $('.section'));
+           // $('.section').each(function (i) {
+                // if ($(this).position().top <= scrollDistance) {
+                //     $('mat-sidenav-container a.active').removeClass('active');
+                //     $('mat-sidenav-container a').eq(i).addClass('active');
                 // }
-
-                // Assign active class to nav links while scolling
-                $('.section').each(function (i) {
-                    if ($(this).position().top <= scrollDistance) {
-                        // console.log(i);
-                        // console.log(scrollDistance);
-                        // console.log($(this).position().top);
-                        $('mat-sidenav-container a.active').removeClass('active');
-                        $('mat-sidenav-container a').eq(i).addClass('active');
-                    }
-                });
-            }).scroll();
+            // });
     }
 
 }
+
+

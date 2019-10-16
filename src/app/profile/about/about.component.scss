@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 #sidebar.column {
     width: 20%;
     float: left;
@@ -20,6 +22,8 @@
 
 mat-card {
     margin-bottom: 10px;
+    background-color: $accent-color;
+    border-radius: 10px;
 }
 
 // Intro Card/Terminal
@@ -57,7 +61,7 @@ mat-card {
 }
 
 .terminal_window {
-    background-color: #224957;
+    background-color: $terminal-color;
     color: #F4FAFF;
     font-size: 11pt;
 }
@@ -89,7 +93,7 @@ mat-card {
 
 mat-card-title.card-title span {
     font-size: 30px;
-    border-bottom: rgb(250, 221, 75) solid 2px;
+    border-bottom: $terminal-color solid 2px;
 }
 
 // Education Card
@@ -102,9 +106,9 @@ mat-card-title.card-title span {
     display: inline-block;
 }
 
-.education-card .univ-logo.mumbai-univ-logo {
-    margin-top: -5px;
-}
+// .education-card .univ-logo.mumbai-univ-logo {
+//     margin-top: -5px;
+// }
 
 .education-card .content {
     display: inline-block;
@@ -122,6 +126,7 @@ mat-card-title.card-title span {
 
 .education-card .course-chip {
     margin: 5px 8px 0 0 !important;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2) !important;
 }
 
 // .univ-logo.northeastern-logo {
@@ -170,6 +175,7 @@ ul.info-list .major {
 .skill-sections .section {
     display: inline-grid;
     width: 32%;
+    margin-top: 10px;
 }
 
 .skill-sections .section-name {
@@ -185,27 +191,39 @@ ul.info-list .major {
     font-size: 18px;
 }
 
+::ng-deep .mat-progress-bar-fill::after {
+    background-color: $terminal-color;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: $bg-color;
+}
 //change progress bar color
 
 span.skill {
     width: 100px;
-    padding-right: 2px;
+    padding-right: 5px;
+    text-align: center;
 }
 
 // Project Card
 
 .project-tile {
     // position: relative;
-	display: inline-block;
+    display: inline-block;
     overflow: hidden;
     height: auto;
     max-width: 100%;
 
     // Keep aspect ratio 56.25% (16:9) intact
 
-    // .project-tile-body {
-    //     display: block;
-    // }
+    .project-tile-body {
+        // display: block;
+        top: 10px;
+        left: 10px;
+        position: absolute;
+        color: black;
+    }
 
     .project-tile-layer {
         opacity: 0;
@@ -217,7 +235,7 @@ span.skill {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.6);
-        color: #fff;
+        color: #d0d3d4;
         padding: 15px;
         -moz-transition: all 0.4s ease-in-out 0s;
         -webkit-transition: all 0.4s ease-in-out 0s;
@@ -227,7 +245,7 @@ span.skill {
 
     .project-layer-text {
         text-align: center;
-        font-size: 18px;
+        font-size: 15px;
         display: inline-block;
         position: absolute;
         top: 50%;
@@ -235,13 +253,73 @@ span.skill {
         -moz-transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
+
+    a.code-link {
+        text-decoration: none;
+        img {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            filter: grayscale(100%) invert(100%);
+            -webkit-filter: grayscale(100%) invert(100%);
+            -moz-filter: grayscale(100%) invert(100%);
+            -o-filter: grayscale(100%) invert(100%);
+            -ms-filter: grayscale(100%) invert(100%);
+            // -webkit-appearance:button;
+            // -moz-appearance:button;
+            // -o-appearance:button;
+            // -ms-appearance:button;
+        }
+    }
+
 }
 
 .project-tile:hover .project-tile-layer,
 .project-tile.active .project-tile-layer {
     opacity: 1;
+}
+
+// Achievements Card
+.achievements .innovator img {
+    height: 100px;
+}
+
+.achievements .technomania img {
+    height: 120px;
+}
+
+.achievements .rip-the-crypt img {
+    height: 120px;
+}
+
+.achievements img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+// .achievements .achievement-container {
+//     width: 33%;
+//     float: left;
+//     margin: 0;
+//     text-align: center;
+//     padding: 0;
+// }
+
+.achievements .achievement-container {
+    display: table-cell;
+    width: 33%;
+    text-align: center;
+}
+
+.achievements-card .achievement-description {
+    display: inline-block;
 }
 
 // Ref: https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints

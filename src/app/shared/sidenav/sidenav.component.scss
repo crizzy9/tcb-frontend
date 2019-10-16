@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .main-container {
     position: fixed;
     width: 19%;
@@ -8,6 +10,12 @@
         width: 150px;
         border-radius: 50%;
         border: 2px solid black;
+    }
+    mat-card.image-card {
+        background-color: $accent-color;
+        border-radius: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .image-card .title {
         margin-top: 10px;
@@ -22,16 +30,18 @@
         font-family: Helvetica;
     }
     .sidenav-container {
-        background-color: white;
+        background-color: $accent-color;
         margin-top: 20px;
-        padding-right: 10px;
+        // padding-right: 10px;
     }
     .sidenav-content {
         margin-top: 10px;
         text-align: center;
-        font-size: 17px;
+        font-size: 20px;
+        font-weight: lighter;
         letter-spacing: 1px;
         padding: 10px;
+        overflow: hidden;
     }
     .text-wrapper:hover {
         -ms-transform: scale(1.5); /* IE 9 */
@@ -41,9 +51,13 @@
     .text-wrapper .nav-link {
         text-decoration: none;
     }
-    .nav-link.active {
-        border-bottom: 2px solid #70b1c5;
+    .sidenav-content.active {
+        background: #d0d3d4;
     }
+
+    // .sidenav-content.active2 {
+    //     background: #d0d3ee;
+    // }
 
     .image-card ul {
         list-style: none;
@@ -59,11 +73,19 @@
                 height: 30px;
                 filter: grayscale(0%) invert(0%);
                 -webkit-filter: grayscale(0%) invert(0%);
+                -moz-filter: grayscale(0%) invert(0%);
+                -o-filter: grayscale(0%) invert(0%);
+                -ms-filter: grayscale(0%) invert(0%);
             }
             img:hover {
-                filter: grayscale(100%) invert(100%);
-                -webkit-filter: grayscale(100%) invert(100%);
+                filter: grayscale(100%) invert(30%);
+                -webkit-filter: grayscale(100%) invert(30%);
+                -moz-filter: grayscale(100%) invert(30%);
+                -o-filter: grayscale(100%) invert(30%);
+                -ms-filter: grayscale(100%) invert(30%);
             }
         }
     }
 }
+
+

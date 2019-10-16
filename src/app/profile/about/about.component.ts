@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { 
     northeasternCourses,
     mumbaiUnivCourses,
@@ -27,6 +27,8 @@ export class AboutComponent implements OnInit {
     technicalSkills = technicalSkills;
     tileColumns;
 
+    currentSection: number = 0;
+
     constructor() {
     }
 
@@ -42,6 +44,10 @@ export class AboutComponent implements OnInit {
     // Ref: https://stackoverflow.com/questions/48493652/angular-5-mat-grid-list-responsive?rq=1
     onResize(event) {
         this.setDeviceBasedConfig(event.target);
+    }
+    
+    mouseEnter(location) {
+        this.currentSection = location;
     }
 
     setDeviceBasedConfig(target) {

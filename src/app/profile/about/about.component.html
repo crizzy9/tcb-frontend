@@ -1,13 +1,13 @@
 <div class="column" id="sidebar">
     <div class="sidenav">
-        <tcb-sidenav [topics]="sections"></tcb-sidenav>
+        <tcb-sidenav [topics]="sections" [currentSection]="currentSection"></tcb-sidenav>
     </div>
 </div>
 <div class="column" id="maincontent">
     <div class="main-container">
 
         <!--Basic Introduction-->
-        <mat-card class="intro-card section terminal_window" id="{{sections[0].id}}">
+        <mat-card (mouseover)="mouseEnter('1')" class="intro-card section terminal_window" id="{{sections[0].id}}">
             <!-- Section should be called my SOURCE CODE -->
             <mat-card-title class="topbar">
                 <div class="red_btn button"></div>
@@ -25,6 +25,7 @@
                         I am an experienced Software Engineer and Researcher with immense passion about Computer Science.
                         I specialize in Artificial Intelligence, more specifically Natural Language Processig and Reinforcement Learning.
                     </p> -->
+                    <!-- Add elevator pitch -->
                     <span id="typed"></span>
                 </div>
 
@@ -32,7 +33,7 @@
         </mat-card>
 
         <!--Education-->
-        <mat-card class="education-card" id="{{sections[1].id}}">
+        <mat-card (mouseover)="mouseEnter('2')" class="education-card" id="{{sections[1].id}}">
             <!-- For smaller screens put both sections in a seperate row -->
 
             <mat-card-title class="card-title"><span>Education</span></mat-card-title>
@@ -52,10 +53,11 @@
                     </div>
                     <div class="courses">
                         <mat-chip-list>
-                            <mat-chip *ngFor="let chip of northeasternCourses" selected="true" [color]="chip.color" class="course-chip">
+                            <mat-chip *ngFor="let chip of northeasternCourses" selected="true" class="course-chip" [ngStyle]="{'background-color': chip.color, 'color': chip.text_color}">
                             {{chip.name}}
                             </mat-chip>
                         </mat-chip-list>
+                        <!-- Put summary here -->
                     </div>
                 </div>
 
@@ -72,9 +74,11 @@
                     </div>
                     <div class="courses">
                         <mat-chip-list>
-                            <mat-chip *ngFor="let chip of mumbaiUnivCourses" selected="true" [color]="chip.color" class="course-chip">
+                            <!-- <mat-chip *ngFor="let chip of mumbaiUnivCourses" selected="true" [color]="chip.color" class="course-chip"> -->
+                            <mat-chip *ngFor="let chip of mumbaiUnivCourses" selected="true" class="course-chip" [ngStyle]="{'background-color': chip.color, 'color': chip.text_color}">
                             {{chip.name}}
                             </mat-chip>
+                            <!-- Put summary here -->
                         </mat-chip-list>
                     </div>
                 </div>
@@ -84,39 +88,55 @@
         </mat-card>
 
         <!--Experiennce-->
-        <mat-card class="experience-card section" id="{{sections[2].id}}">
+        <mat-card (mouseover)="mouseEnter('3')" class="experience-card section" id="{{sections[2].id}}">
             <mat-card-title class="card-title"><span>Experience</span></mat-card-title>
             <div>
                 <img class="company-logo intuit-logo" src="assets/images/intuit-logo.jpg">
                 <div class="work-place">
                     <ul>
                         <li><h3>Intuit</h3></li>
-                        <li><h4>Software Engineering Coop</h4></li>
+                        <li><h4>Software Engineering Intern (May '19 - Aug '19)</h4></li>
+                        <li><h4>Software Engineering Coop (May '18 - Dec '18)</h4></li>
                         <li><h5>San Diego, California</h5></li>
                     </ul>
                 </div>
-                <p>Worked in the CG Department of TurboTax in the Self Service Team. Worked with python lambdas and spring boot. Saved close to 2 million $. Won the First Ever Innovator Award at the Codechella event</p>
-                <img class="company-logo votercircle-logo" src="assets/images/votercircle-logo.jpg">
+                <p>
+                    Introduced faster OCR W2 PDF Upload in Income topic in the form of an AB Test resulting in 20% reduced tax prep time<br>
+                    Integrated Decision Engine for intent classification, replacing third party solutions and decreasing latency by 30%<br>
+                    Built a Case Deduplication Service with AWS Lambdas improving response times by 45% while mitigating 7% of duplicate cases<br>
+                    Created Smart Fields with React and PHP streamlining content publishing to prod by 30 mins and reducing 10% of case creations<br>
+                    Constructed a highly scalable General Redirect Service with AWS Lambdas and DynamoDB with 35% more efficiency<br>
+                </p>
+                <img class="company-logo votercircle-logo" src="assets/images/outreachcircle.png">
                 <div class="work-place">
                     <ul>
-                        <li><h3>Votercircle</h3></li>
-                        <li><h4>Software Developer</h4></li>
+                        <li><h3>Outreach Circle</h3></li>
+                        <li><h4>Software Developer (Nov '16 - May '17)</h4></li>
                         <li><h5>Bangalore, India</h5></li>
                     </ul>
                 </div>
-                <p>Built the Organizer functionality from the ground up, Integrated NationBuilder, Elastic Search</p>
+                <p>
+                    Developed a flagship feature for building distributed campaign organizers with Meteor.js and Angular, boosting canvassing efficiency and voter turnouts by 15%<br>
+                    Integrated contact matching with ElasticSearch between voter files and social media contacts increasing effective outreach by 10%<br>
+                    Designed highly customizable email templates for sending notifications to and from supporters using SendGrid<br>
+                    Generated campaign statistics in Chart.js to track supporter growth, outreach and identify super influencers<br>
+                </p>
                 <img class="company-logo iitbombay-logo" src="assets/images/iitbombay-logo.png">
                 <div class="work-place">
                     <ul>
                         <li><h3>IIT Bombay</h3></li>
-                        <li><h4>Research Intern</h4></li>
+                        <li><h4>Research Intern (Aug '16 - Nov '16)</h4></li>
                         <li><h5>Mumbai, India</h5></li>
                     </ul>
                 </div>
-                <p>Created micro-services for automated notifications and invoice generation.</p>
+                <p>
+                    Created a micro service for automated recurring deliveries and invoice generation in Spring Boot and MySQL<br>
+                    Configured Nginx load balancer and API Gateway with Redis to improve reliability and enable faster transactions<br>
+                    Trained a Collaborative Filtering recommendation system for giving product suggestions with 87% precision<br>
+                </p>
             </div>
         </mat-card>
-        <mat-card class="skills-card section" id="{{sections[3].id}}">
+        <mat-card (mouseover)="mouseEnter('4')" class="skills-card section" id="{{sections[3].id}}">
             <mat-card-title class="card-title"><span>Skills</span></mat-card-title>
             <!-- Give different sections in skills and use images instead of the names but keep names on hover -->
             <div class="skill-sections">
@@ -134,30 +154,48 @@
 
             </div>
         </mat-card>
-        <mat-card class="projects-card section" id="{{sections[4].id}}">
+        <mat-card (mouseover)="mouseEnter('5')" class="projects-card section" id="{{sections[4].id}}">
             <!-- Make project picture carousel if more than one. Should also support Videos. -->
             <!-- Create an issue for this on Github -->
+            <!-- could also make an effect that on hover it becomes big and arranges the tiles around it -->
             <mat-card-title class="card-title"><span>Projects</span></mat-card-title>
             <mat-grid-list class="projects-grid" [cols]="tileColumns" rowHeight="16:9" (window:resize)="onResize($event)">
                 <mat-grid-tile *ngFor="let project of projects" class="project-tile" [colspan]="project.cols" [rowspan]="project.rows" [ngStyle]="{'background': project.color + ' url(' + project.image + ') no-repeat 0 0', 'background-size': 'contain', '-webkit-background-size': 'contain', '-moz-background-size': 'contain', '-o-background-size': 'contain'}">
                     <div class="project-tile-body">
-                        {{project.text}}
+                        <strong>{{project.text}}</strong>
                     </div>
                     <div class="project-tile-layer">
-                        <div class="project-layer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ligula porttitor, lacinia sapien non.</div>
+                        <div class="project-layer-text">{{project.desc}}</div>
+                        <a class="code-link" *ngIf="project.show_github" target="_blank" href="{{project.github}}">
+                            <img src="assets/icons/github.png" />
+                        </a>
                     </div>
                 </mat-grid-tile>
             </mat-grid-list>
         </mat-card>
-        <mat-card class="achievements-card section" id="{{sections[5].id}}">
+        <mat-card (mouseover)="mouseEnter('6')" class="achievements-card section" id="{{sections[5].id}}">
             <mat-card-title class="card-title"><span>Achievements</span></mat-card-title>
-            <mat-list>
-                <mat-list-item>Innovator Award - Codechella 2018</mat-list-item>
-                <mat-list-item>Runner Up, Paper Presentation, Technomania 2016</mat-list-item>
-                <mat-list-item>3rd Place, RIP The Crypt, Crescendo 2015</mat-list-item>
-                <mat-list-item></mat-list-item>
-            </mat-list>
+            <div class="achievements">
+                <div class="achievement-container innovator">
+                    <img class="achievement-logo innovator-logo" src="assets/images/comic-con.jpg">
+                    <span class="achievement-description award">Innovator Award</span>
+                    <span class="achievement-description place">Comic-Con Museum/Intuit, Codechella 2018</span>
+                </div>
+                <div class="achievement-container technomania">
+                    <img class="achievement-logo technomania-logo" src="assets/images/technomania.png">
+                    <span class="achievement-description award">Runner Up</span>
+                    <span class="achievement-description place">Paper Presentation, Technomania 2016</span>
+                </div>
+                <div class="achievement-container rip-the-crypt">
+                    <img class="achievement-logo rip-the-crypt-logo" src="assets/images/RIPTheCrypt.png">
+                    <span class="achievement-description award">3rd Place</span>
+                    <br/>
+                    <span class="achievement-description place">RIP The Crypt (TCS), Crescendo 2015</span>
+                </div>
+            </div>
         </mat-card>
         <!-- Other stuff like leadership(find a better name): ieee, networking internship and stuff, Publications, Interests, Hobbies-->
     </div>
 </div>
+
+
